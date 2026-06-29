@@ -1,0 +1,2777 @@
+[
+  {
+    "id": 1,
+    "content": "图像数据中，像素关联性随距离增大而减弱，这种特性被称为____关联性。",
+    "options": [],
+    "answer": "长程",
+    "analysis": "图片也有长程关联",
+    "type": "fill"
+  },
+  {
+    "id": 2,
+    "content": "图像数据中像素关联强度随距离增大而减弱，呈____衰减。",
+    "options": [],
+    "answer": "幂律",
+    "analysis": "幂律衰减",
+    "type": "fill"
+  },
+  {
+    "id": 3,
+    "content": "图像数据的幂律衰减可理解为无穷多个不同半衰期的____衰减之和。",
+    "options": [],
+    "answer": "指数",
+    "analysis": "幂律=无穷多指数衰减",
+    "type": "fill"
+  },
+  {
+    "id": 4,
+    "content": "图像数据不具有____不变性。",
+    "options": [],
+    "answer": "置换",
+    "analysis": "图像无置换不变性",
+    "type": "fill"
+  },
+  {
+    "id": 5,
+    "content": "两像素完全独立时，其互信息量等于____。",
+    "options": [],
+    "answer": "0",
+    "analysis": "独立则互信息=0",
+    "type": "fill"
+  },
+  {
+    "id": 6,
+    "content": "卷积核通过____初始化后经训练得到。",
+    "options": [],
+    "answer": "随机",
+    "analysis": "卷积核随机初始化",
+    "type": "fill"
+  },
+  {
+    "id": 7,
+    "content": "卷积核中的偏置b是一个____的标量。",
+    "options": [],
+    "answer": "可学习",
+    "analysis": "偏置可训练",
+    "type": "fill"
+  },
+  {
+    "id": 8,
+    "content": "一个卷积层使用了64个3×3的卷积核，输入通道数为3。根据参数计算规则，每个卷积核有3×3×3=27个权重参数和1个偏置，总参数量为____。",
+    "options": [
+      "A. 1792",
+      "B. 1664",
+      "C. 1856",
+      "D. 1536"
+    ],
+    "answer": "A",
+    "analysis": "每个卷积核参数量=3×3×3+1=28。64个卷积核总参数量=64×28=1792。卷积核个数等于输出通道数。",
+    "type": "choice"
+  },
+  {
+    "id": 9,
+    "content": "ResNet50网络第一层卷积使用7×7的卷积核，stride=2，输出通道数为____。",
+    "options": [
+      "A. 256",
+      "B. 64",
+      "C. 128",
+      "D. 512"
+    ],
+    "answer": "B",
+    "analysis": "ResNet50第一层卷积配置为7×7, 64, stride=2，输出64个通道，之后接3×3最大池化。",
+    "type": "choice"
+  },
+  {
+    "id": 10,
+    "content": "填充Padding补零的操作____引入任何可学习参数。",
+    "options": [],
+    "answer": "不",
+    "analysis": "Padding无参数",
+    "type": "fill"
+  },
+  {
+    "id": 11,
+    "content": "增大步长Stride会____输出特征图的空间尺寸。",
+    "options": [],
+    "answer": "缩小",
+    "analysis": "步长增大输出缩小",
+    "type": "fill"
+  },
+  {
+    "id": 12,
+    "content": "步长为2的卷积可替代____实现可学习的下采样。",
+    "options": [
+      "A. 激活函数",
+      "B. 全连接",
+      "C. 池化",
+      "D. 归一化"
+    ],
+    "answer": "C",
+    "analysis": "步长卷积替代池化",
+    "type": "choice"
+  },
+  {
+    "id": 13,
+    "content": "若所有卷积层用padding=1、stride=1的3×3卷积，网络加深时空间尺寸____。",
+    "options": [
+      "A. 逐渐减小",
+      "B. 保持不变",
+      "C. 逐渐增大",
+      "D. 先大后小"
+    ],
+    "answer": "B",
+    "analysis": "尺寸不变",
+    "type": "choice"
+  },
+  {
+    "id": 14,
+    "content": "池化层的主要作用是____处理更长关联。",
+    "options": [
+      "A. 下采样并逐渐",
+      "B. 上采样并快速",
+      "C. 直接",
+      "D. 不参与"
+    ],
+    "answer": "A",
+    "analysis": "池化作用",
+    "type": "choice"
+  },
+  {
+    "id": 15,
+    "content": "池化操作____可学习参数。",
+    "options": [],
+    "answer": "不增加任何",
+    "analysis": "池化无参数",
+    "type": "fill"
+  },
+  {
+    "id": 16,
+    "content": "某CNN模型在处理图像分类任务时，使用了最大池化和平均池化两种方式。最大池化取窗口内____值，平均池化取____值。若窗口内像素值为[2,5,1,4]，最大池化结果为____，平均池化结果为____。",
+    "options": [],
+    "answer": "最大；平均；5；3",
+    "analysis": "最大池化取窗口内最大值：max(2,5,1,4)=5；平均池化取窗口内平均值：(2+5+1+4)/4=12/4=3。",
+    "type": "choice"
+  },
+  {
+    "id": 17,
+    "content": "最大池化取窗口内____，平均池化取____。",
+    "options": [
+      "A. 最大值、最小值",
+      "B. 最大值、平均值",
+      "C. 平均值、最大值",
+      "D. 中位数、平均值"
+    ],
+    "answer": "B",
+    "analysis": "池化类型",
+    "type": "choice"
+  },
+  {
+    "id": 18,
+    "content": "全局平均池化GAP将每个特征通道压缩为一个数值。假设特征图尺寸为14×14×256，经过GAP后输出维度为____。",
+    "options": [
+      "A. 1×1×256",
+      "B. 14×14×1",
+      "C. 256",
+      "D. 14×14"
+    ],
+    "answer": "C",
+    "analysis": "GAP对每个通道取全局平均值，14×14的空间维度被压缩为1个值，256个通道保持不变，输出为256维向量。",
+    "type": "choice"
+  },
+  {
+    "id": 19,
+    "content": "某特征图尺寸为8×8×128，经过GAP后，通道数____（填'改变'或'不变'），空间维度变为____×____。",
+    "options": [],
+    "answer": "不变；1；1",
+    "analysis": "GAP只压缩空间维度，不改变通道数。8×8的空间被压缩为1×1，通道数仍为128。",
+    "type": "choice"
+  },
+  {
+    "id": 20,
+    "content": "若卷积层输出为14×14×256，直接展平后接全连接层到10个类别，全连接层参数量为____。若先经过GAP再接全连接，参数量为____。",
+    "options": [
+      "A. 501770, 2570",
+      "B. 501760, 2560",
+      "C. 500000, 2500",
+      "D. 502000, 2600"
+    ],
+    "answer": "A",
+    "analysis": "直接展平：14×14×256=50176，全连接参数量=50176×10+10=501770。GAP后：256×10+10=2570。GAP大幅减少参数量。",
+    "type": "choice"
+  },
+  {
+    "id": 21,
+    "content": "CNN标准流程依次为卷积→____→池化→展平→FC→Softmax。",
+    "options": [
+      "A. 批量归一化",
+      "B. 激活",
+      "C. Dropout",
+      "D. 残差"
+    ],
+    "answer": "B",
+    "analysis": "流程：卷积→激活→池化",
+    "type": "choice"
+  },
+  {
+    "id": 22,
+    "content": "卷积输出特征图展平后接入____。",
+    "options": [
+      "A. 池化层",
+      "B. 全连接层",
+      "C. Softmax层",
+      "D. 卷积层"
+    ],
+    "answer": "B",
+    "analysis": "展平后接全连接",
+    "type": "choice"
+  },
+  {
+    "id": 23,
+    "content": "卷积层之后、池化层之前通常插入____层。",
+    "options": [
+      "A. 批量归一化",
+      "B. Softmax",
+      "C. 激活ReLU",
+      "D. 全连接"
+    ],
+    "answer": "C",
+    "analysis": "激活在卷积后池化前",
+    "type": "choice"
+  },
+  {
+    "id": 24,
+    "content": "平均池化取窗口内____值。",
+    "options": [],
+    "answer": "平均",
+    "analysis": "平均池化",
+    "type": "fill"
+  },
+  {
+    "id": 25,
+    "content": "卷积核偏置b是一个____的标量。",
+    "options": [],
+    "answer": "可学习",
+    "analysis": "偏置可训练",
+    "type": "fill"
+  },
+  {
+    "id": 26,
+    "content": "自然语言是____值的符号序列。",
+    "options": [],
+    "answer": "离散",
+    "analysis": "语言离散",
+    "type": "fill"
+  },
+  {
+    "id": 27,
+    "content": "语言具有____特性，如从句套从句的嵌套结构。",
+    "options": [],
+    "answer": "递归性",
+    "analysis": "递归性",
+    "type": "fill"
+  },
+  {
+    "id": 28,
+    "content": "自然语言具有____依赖关系。",
+    "options": [],
+    "answer": "长程",
+    "analysis": "语言长程依赖",
+    "type": "fill"
+  },
+  {
+    "id": 29,
+    "content": "传统全连接/卷积处理NLP的局限不包括____。",
+    "options": [
+      "A. 输入尺寸固定",
+      "B. 无历史记忆",
+      "C. 不能处理变长序列",
+      "D. 无法提取特征"
+    ],
+    "answer": "D",
+    "analysis": "传统模型局限",
+    "type": "choice"
+  },
+  {
+    "id": 30,
+    "content": "数据质量好的三大作用不包括____。",
+    "options": [
+      "A. 节约算力",
+      "B. 增强稳定性",
+      "C. 减少错误输出",
+      "D. 减少数据量"
+    ],
+    "answer": "D",
+    "analysis": "数据质量作用",
+    "type": "choice"
+  },
+  {
+    "id": 31,
+    "content": "重复数据会____模型上下文处理能力。",
+    "options": [
+      "A. 增强",
+      "B. 降低",
+      "C. 不影响",
+      "D. 先增后降"
+    ],
+    "answer": "B",
+    "analysis": "重复数据降低上下文",
+    "type": "choice"
+  },
+  {
+    "id": 32,
+    "content": "词元化Tokenization将属于____的字符聚合在一起。",
+    "options": [
+      "A. 相邻位置",
+      "B. 同一语义/语法单元",
+      "C. 相同长度",
+      "D. 相同频率"
+    ],
+    "answer": "B",
+    "analysis": "词元化定义",
+    "type": "choice"
+  },
+  {
+    "id": 33,
+    "content": "基于规则的分词和基于____的分词是两类主要方法。",
+    "options": [
+      "A. 频率",
+      "B. 统计",
+      "C. 长度",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "两类分词方法",
+    "type": "choice"
+  },
+  {
+    "id": 34,
+    "content": "词嵌入将高维one-hot转换为____维、可训练的稠密向量。",
+    "options": [],
+    "answer": "较低",
+    "analysis": "词嵌入降维",
+    "type": "fill"
+  },
+  {
+    "id": 35,
+    "content": "NTP的标签____获取，无需人工标注。",
+    "options": [],
+    "answer": "自动",
+    "analysis": "自监督标签",
+    "type": "fill"
+  },
+  {
+    "id": 36,
+    "content": "NTP训练用____损失衡量预测误差。",
+    "options": [
+      "A. 均方误差MSE",
+      "B. 交叉熵损失CE",
+      "C. 绝对误差MAE",
+      "D. Hinge损失"
+    ],
+    "answer": "B",
+    "analysis": "交叉熵损失",
+    "type": "choice"
+  },
+  {
+    "id": 37,
+    "content": "RNN处理任意长度序列的核心是不同时间步____权重。",
+    "options": [],
+    "answer": "共享",
+    "analysis": "权重共享",
+    "type": "fill"
+  },
+  {
+    "id": 38,
+    "content": "RNN隐藏状态由当前输入与____时刻隐藏状态共同决定。",
+    "options": [],
+    "answer": "上一",
+    "analysis": "隐藏状态",
+    "type": "fill"
+  },
+  {
+    "id": 39,
+    "content": "Encoder-Decoder架构解决____问题。",
+    "options": [
+      "A. 输入输出等长",
+      "B. 输入输出不等长",
+      "C. 分类",
+      "D. 回归"
+    ],
+    "answer": "B",
+    "analysis": "Encoder-Decoder",
+    "type": "choice"
+  },
+  {
+    "id": 40,
+    "content": "RNN参数量公式为____各矩阵/偏置维度之和。",
+    "options": [
+      "A. U+V",
+      "B. U+W+V+b_h+b_y",
+      "C. W+U",
+      "D. V+W"
+    ],
+    "answer": "B",
+    "analysis": "参数量公式",
+    "type": "choice"
+  },
+  {
+    "id": 41,
+    "content": "BPTT梯度消失/爆炸源于多时间步____连乘。",
+    "options": [],
+    "answer": "链式",
+    "analysis": "BPTT问题",
+    "type": "fill"
+  },
+  {
+    "id": 42,
+    "content": "LSTM引入的关键设计是____。",
+    "options": [
+      "A. 更深的网络",
+      "B. 记忆状态cell state+门控",
+      "C. 注意力机制",
+      "D. 残差连接"
+    ],
+    "answer": "B",
+    "analysis": "LSTM设计",
+    "type": "choice"
+  },
+  {
+    "id": 43,
+    "content": "LSTM中控制信息比例的门用____激活函数。",
+    "options": [],
+    "answer": "Sigmoid",
+    "analysis": "门控用Sigmoid",
+    "type": "fill"
+  },
+  {
+    "id": 44,
+    "content": "LSTM中提取信息用____激活函数。",
+    "options": [],
+    "answer": "Tanh",
+    "analysis": "Tanh提取信息",
+    "type": "fill"
+  },
+  {
+    "id": 45,
+    "content": "LSTM与Transformer的共同点是都通过____提取信息。",
+    "options": [
+      "A. 卷积",
+      "B. 线性变换",
+      "C. 池化",
+      "D. 循环"
+    ],
+    "answer": "B",
+    "analysis": "线性变换共性",
+    "type": "choice"
+  },
+  {
+    "id": 46,
+    "content": "LSTM遗忘门取值范围(0,1)有利于____。",
+    "options": [
+      "A. 加快训练",
+      "B. 缓解梯度消失",
+      "C. 增加参数",
+      "D. 增强非线性"
+    ],
+    "answer": "B",
+    "analysis": "遗忘门缓解梯度",
+    "type": "choice"
+  },
+  {
+    "id": 47,
+    "content": "BPE从基本符号迭代合并____最高的相邻词元对。",
+    "options": [],
+    "answer": "共现频率",
+    "analysis": "BPE原理",
+    "type": "fill"
+  },
+  {
+    "id": 48,
+    "content": "推理遇到终止符____停止生成。",
+    "options": [],
+    "answer": "SEP",
+    "analysis": "终止符",
+    "type": "fill"
+  },
+  {
+    "id": 49,
+    "content": "Enc-Dec架构用于____长度序列。",
+    "options": [],
+    "answer": "输入输出不等长",
+    "analysis": "Encoder-Decoder",
+    "type": "fill"
+  },
+  {
+    "id": 50,
+    "content": "LSTM三个门：遗忘门、输入门、____门。",
+    "options": [],
+    "answer": "输出",
+    "analysis": "LSTM三个门",
+    "type": "fill"
+  },
+  {
+    "id": 51,
+    "content": "RNN/LSTM逐token串行处理的主要问题是无法____计算。",
+    "options": [],
+    "answer": "并行",
+    "analysis": "串行问题",
+    "type": "fill"
+  },
+  {
+    "id": 52,
+    "content": "Transformer两大核心优势是全局依赖和____。",
+    "options": [
+      "A. 更少参数",
+      "B. 高效并行计算",
+      "C. 更简单",
+      "D. 更快收敛"
+    ],
+    "answer": "B",
+    "analysis": "并行计算",
+    "type": "choice"
+  },
+  {
+    "id": 53,
+    "content": "自注意力可直接计算序列____两位置的关联。",
+    "options": [],
+    "answer": "任意",
+    "analysis": "自注意力全局",
+    "type": "fill"
+  },
+  {
+    "id": 54,
+    "content": "原始Transformer(2017)最初应用于____。",
+    "options": [
+      "A. 图像分类",
+      "B. 机器翻译",
+      "C. 语音识别",
+      "D. 文本生成"
+    ],
+    "answer": "B",
+    "analysis": "机器翻译",
+    "type": "choice"
+  },
+  {
+    "id": 55,
+    "content": "注意力中的Q/K/V通过对输入做____变换得到。",
+    "options": [],
+    "answer": "线性",
+    "analysis": "Q/K/V线性变换",
+    "type": "fill"
+  },
+  {
+    "id": 56,
+    "content": "在缩放点积注意力中，Q和K都是d_k维向量。当d_k=64时，点积Q·K的可能范围较大，除以√d_k=____可防止Softmax梯度饱和。",
+    "options": [
+      "A. 8",
+      "B. 64",
+      "C. 16",
+      "D. 4"
+    ],
+    "answer": "A",
+    "analysis": "缩放因子√d_k=√64=8。除以8后，点积值被缩放，避免Softmax输出过于极端导致梯度接近零。",
+    "type": "choice"
+  },
+  {
+    "id": 57,
+    "content": "注意力输出是对Value的____。",
+    "options": [
+      "A. 直接复制",
+      "B. 加权求和",
+      "C. 逐元素相乘",
+      "D. 拼接"
+    ],
+    "answer": "B",
+    "analysis": "加权求和",
+    "type": "choice"
+  },
+  {
+    "id": 58,
+    "content": "因果掩码Causal Mask的作用是屏蔽____token防信息泄露。",
+    "options": [],
+    "answer": "未来",
+    "analysis": "因果掩码",
+    "type": "fill"
+  },
+  {
+    "id": 59,
+    "content": "Transformer输入表示为Embedding____位置编码。",
+    "options": [
+      "A. 替换为",
+      "B. 加上",
+      "C. 乘以",
+      "D. 拼接后"
+    ],
+    "answer": "B",
+    "analysis": "加位置编码",
+    "type": "choice"
+  },
+  {
+    "id": 60,
+    "content": "Transformer输入处理顺序为先做Embedding再加位置编码。假设词嵌入维度为512，位置编码维度也为512，则最终输入表示维度为____。",
+    "options": [
+      "A. 512",
+      "B. 1024",
+      "C. 256",
+      "D. 768"
+    ],
+    "answer": "A",
+    "analysis": "Embedding和位置编码是相加关系而非拼接，所以维度保持不变仍为512。相加后保留了词义信息和位置信息。",
+    "type": "choice"
+  },
+  {
+    "id": 61,
+    "content": "Embedding提供____信息，位置编码提供____信息。",
+    "options": [
+      "A. 位置、词义",
+      "B. 词义、位置",
+      "C. 语法、语义",
+      "D. 语义、语法"
+    ],
+    "answer": "B",
+    "analysis": "分工",
+    "type": "choice"
+  },
+  {
+    "id": 62,
+    "content": "LayerNorm对每个token的____维进行标准化。",
+    "options": [],
+    "answer": "特征",
+    "analysis": "LayerNorm特征维",
+    "type": "fill"
+  },
+  {
+    "id": 63,
+    "content": "在深度学习中，残差连接被广泛用于构建更深的网络。给定输入x和变换函数F(x)，残差连接公式为y=x+F(x)。如果F(x)=0（恒等映射），则输出y=____。",
+    "options": [
+      "A. 0",
+      "B. x",
+      "C. 2x",
+      "D. -x"
+    ],
+    "answer": "B",
+    "analysis": "残差连接公式：y=x+F(x)。当F(x)=0时，y=x+0=x。这说明残差网络可以轻松学习恒等映射，解决了深度网络的退化问题。",
+    "type": "choice"
+  },
+  {
+    "id": 64,
+    "content": "残差连接使网络易学____映射。",
+    "options": [
+      "A. 非线性",
+      "B. 恒等",
+      "C. 线性",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "恒等映射",
+    "type": "choice"
+  },
+  {
+    "id": 65,
+    "content": "FFN在Transformer中是对____操作的。",
+    "options": [
+      "A. 跨token混合",
+      "B. 逐位置per-token共享",
+      "C. 跨层",
+      "D. 全局"
+    ],
+    "answer": "B",
+    "analysis": "FFN逐位置",
+    "type": "choice"
+  },
+  {
+    "id": 66,
+    "content": "输出层将向量投影到____维并通过Softmax得到概率。",
+    "options": [
+      "A. 隐藏层",
+      "B. 词表大小",
+      "C. 批次大小",
+      "D. 序列长度"
+    ],
+    "answer": "B",
+    "analysis": "词表大小",
+    "type": "choice"
+  },
+  {
+    "id": 67,
+    "content": "解码时____方式每次选概率最大的token。",
+    "options": [
+      "A. 采样",
+      "B. 贪婪argmax",
+      "C. Beam Search",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "贪婪解码",
+    "type": "choice"
+  },
+  {
+    "id": 68,
+    "content": "Beam Search解码保留____候选序列。",
+    "options": [
+      "A. 一个",
+      "B. 多个",
+      "C. 全部",
+      "D. 零个"
+    ],
+    "answer": "B",
+    "analysis": "Beam Search多候选",
+    "type": "choice"
+  },
+  {
+    "id": 69,
+    "content": "在Transformer中，缩放点积注意力公式为Attention(Q,K,V)=softmax(QK^T/√d_k)·V。假设Q和K都是4×4的矩阵，d_k=4，则QK^T的结果是____×____的矩阵。",
+    "options": [
+      "A. 4×4",
+      "B. 4×1",
+      "C. 1×4",
+      "D. 16×16"
+    ],
+    "answer": "A",
+    "analysis": "矩阵乘法规则：若Q是m×n矩阵，K是n×p矩阵，则QK^T是m×p矩阵。这里Q和K都是4×4，所以QK^T是4×4矩阵。除以√d_k=√4=2用于防止Softmax梯度饱和。",
+    "type": "fill"
+  },
+  {
+    "id": 70,
+    "content": "解码方式有贪婪解码和____解码。",
+    "options": [],
+    "answer": "采样",
+    "analysis": "解码策略",
+    "type": "fill"
+  },
+  {
+    "id": 71,
+    "content": "Beam Search保留____候选序列。",
+    "options": [],
+    "answer": "多个",
+    "analysis": "Beam Search",
+    "type": "fill"
+  },
+  {
+    "id": 72,
+    "content": "过参数化网络中参数量大于样本量时，泛化往往____。",
+    "options": [],
+    "answer": "很好",
+    "analysis": "过参数化泛化好",
+    "type": "fill"
+  },
+  {
+    "id": 73,
+    "content": "隐式偏好来源于训练算法与____的相互作用。",
+    "options": [
+      "A. 数据分布",
+      "B. 网络结构",
+      "C. 损失函数",
+      "D. 学习率"
+    ],
+    "answer": "B",
+    "analysis": "隐式偏好",
+    "type": "choice"
+  },
+  {
+    "id": 74,
+    "content": "傅里叶展开中，低频描述____，高频描述____。",
+    "options": [],
+    "answer": "轮廓；细节",
+    "analysis": "低频轮廓高频细节",
+    "type": "fill"
+  },
+  {
+    "id": 75,
+    "content": "频率原则指神经网络按____到____顺序学习。",
+    "options": [],
+    "answer": "低频；高频",
+    "analysis": "先低频后高频",
+    "type": "fill"
+  },
+  {
+    "id": 76,
+    "content": "以下哪项符合频率原则的现象？",
+    "options": [
+      "A. 先学细节再学轮廓",
+      "B. 先学轮廓再学细节",
+      "C. 同时学",
+      "D. 只学高频"
+    ],
+    "answer": "B",
+    "analysis": "到轮廓再细节",
+    "type": "choice"
+  },
+  {
+    "id": 77,
+    "content": "频率原则说明的是训练动态中的____。",
+    "options": [
+      "A. 表达能力",
+      "B. 学习顺序",
+      "C. 收敛速度",
+      "D. 参数量"
+    ],
+    "answer": "B",
+    "analysis": "学习顺序",
+    "type": "choice"
+  },
+  {
+    "id": 78,
+    "content": "早停Early Stopping在开始拟合____噪声前停止。",
+    "options": [],
+    "answer": "高频",
+    "analysis": "早停时机",
+    "type": "fill"
+  },
+  {
+    "id": 79,
+    "content": "过参数化拟合含噪数据时，测试误差____。",
+    "options": [
+      "A. 持续下降",
+      "B. 先降后升",
+      "C. 持续上升",
+      "D. 不变"
+    ],
+    "answer": "B",
+    "analysis": "测试误差先降后升",
+    "type": "choice"
+  },
+  {
+    "id": 80,
+    "content": "图像频率中，高频信号对应____边缘纹理。",
+    "options": [],
+    "answer": "锐利",
+    "analysis": "高频=细节",
+    "type": "fill"
+  },
+  {
+    "id": 81,
+    "content": "分类问题中讨论的频率指的是____函数的频率。",
+    "options": [],
+    "answer": "分类",
+    "analysis": "分类函数频率",
+    "type": "fill"
+  },
+  {
+    "id": 82,
+    "content": "对抗噪声沿分类函数____方向加易导致分类错误。",
+    "options": [
+      "A. 低频成分",
+      "B. 高频成分",
+      "C. 任意方向",
+      "D. 零梯度"
+    ],
+    "answer": "B",
+    "analysis": "对抗噪声沿高频",
+    "type": "choice"
+  },
+  {
+    "id": 83,
+    "content": "网络拟合先学____再学____。",
+    "options": [],
+    "answer": "轮廓；细节",
+    "analysis": "拟合顺序",
+    "type": "fill"
+  },
+  {
+    "id": 84,
+    "content": "早停在学习拟合____前停止。",
+    "options": [],
+    "answer": "高频噪声",
+    "analysis": "早停时机",
+    "type": "fill"
+  },
+  {
+    "id": 85,
+    "content": "初始化不仅决定初始参数位置，也影响初始输出、____路径与最终结果。",
+    "options": [],
+    "answer": "梯度",
+    "analysis": "初始化影响",
+    "type": "fill"
+  },
+  {
+    "id": 86,
+    "content": "ReLU的非线性主要体现在____附近。",
+    "options": [],
+    "answer": "转折点",
+    "analysis": "转折点附近",
+    "type": "fill"
+  },
+  {
+    "id": 87,
+    "content": "ReLU转折点计算条件为____。",
+    "options": [
+      "A. w=0",
+      "B. wx+b=0即x=-b/w",
+      "C. b=0",
+      "D. x=0"
+    ],
+    "answer": "B",
+    "analysis": "转折点公式",
+    "type": "choice"
+  },
+  {
+    "id": 88,
+    "content": "凝聚现象Condensation指____初始化下神经元趋同。",
+    "options": [],
+    "answer": "小",
+    "analysis": "小初始化凝聚",
+    "type": "fill"
+  },
+  {
+    "id": 89,
+    "content": "凝聚现象中，有效神经元数量较____。",
+    "options": [
+      "A. 多",
+      "B. 少",
+      "C. 为零",
+      "D. 全"
+    ],
+    "answer": "B",
+    "analysis": "有效神经元少",
+    "type": "choice"
+  },
+  {
+    "id": 90,
+    "content": "大网络在凝聚下的有效表达接近____网络。",
+    "options": [
+      "A. 更大",
+      "B. 更小",
+      "C. 相同",
+      "D. 零"
+    ],
+    "answer": "B",
+    "analysis": "等效小网络",
+    "type": "choice"
+  },
+  {
+    "id": 91,
+    "content": "有效神经元增多时，网络可学习____频率成分。",
+    "options": [
+      "A. 更低",
+      "B. 更高",
+      "C. 相同",
+      "D. 零"
+    ],
+    "answer": "B",
+    "analysis": "凝聚→高频",
+    "type": "choice"
+  },
+  {
+    "id": 92,
+    "content": "大网络比小网络更易训练的原因是____。",
+    "options": [
+      "A. 结构简单",
+      "B. 参数更多、下降方向更多",
+      "C. 收敛快",
+      "D. 过拟合少"
+    ],
+    "answer": "B",
+    "analysis": "大网络训练优势",
+    "type": "choice"
+  },
+  {
+    "id": 93,
+    "content": "所有参数初始化为0会导致梯度恒为____无法训练。",
+    "options": [],
+    "answer": "0",
+    "analysis": "全零初始化问题",
+    "type": "fill"
+  },
+  {
+    "id": 94,
+    "content": "平坦解相比尖锐解更____、泛化更好。",
+    "options": [],
+    "answer": "鲁棒",
+    "analysis": "平坦解优势",
+    "type": "fill"
+  },
+  {
+    "id": 95,
+    "content": "小批量SGD更易找到平坦解是因为____。",
+    "options": [
+      "A. 计算快",
+      "B. 随机性强助逃离尖锐区域",
+      "C. 参数少",
+      "D. 梯度大"
+    ],
+    "answer": "B",
+    "analysis": "小批量与平坦",
+    "type": "choice"
+  },
+  {
+    "id": 96,
+    "content": "提升平坦性的技巧包括小批量、____、Dropout等。",
+    "options": [
+      "A. 更小学习率",
+      "B. 合理更大学习率",
+      "C. 更多数据",
+      "D. 更多参数"
+    ],
+    "answer": "B",
+    "analysis": "提升平坦性",
+    "type": "choice"
+  },
+  {
+    "id": 97,
+    "content": "学习率过大会导致____。",
+    "options": [
+      "A. 收敛更快",
+      "B. 损失震荡甚至发散",
+      "C. 更好泛化",
+      "D. 参数减少"
+    ],
+    "answer": "B",
+    "analysis": "学习率稳定性",
+    "type": "choice"
+  },
+  {
+    "id": 98,
+    "content": "大初始化易过拟合，中等初始化输出____。",
+    "options": [],
+    "answer": "光滑",
+    "analysis": "初始化影响",
+    "type": "fill"
+  },
+  {
+    "id": 99,
+    "content": "平坦解附近损失变化____，对扰动更鲁棒。",
+    "options": [],
+    "answer": "慢",
+    "analysis": "平坦解",
+    "type": "fill"
+  },
+  {
+    "id": 100,
+    "content": "大模型又称____模型Foundation Model。",
+    "options": [],
+    "answer": "基础",
+    "analysis": "基础模型",
+    "type": "fill"
+  },
+  {
+    "id": 101,
+    "content": "Encoder-only架构不使用causal mask，更适合____任务。",
+    "options": [],
+    "answer": "理解",
+    "analysis": "Encoder-only理解",
+    "type": "fill"
+  },
+  {
+    "id": 102,
+    "content": "Decoder-only架构使用causal mask，更适合____任务。",
+    "options": [],
+    "answer": "生成",
+    "analysis": "Decoder-only生成",
+    "type": "fill"
+  },
+  {
+    "id": 103,
+    "content": "当前主流大语言模型采用____架构。",
+    "options": [
+      "A. Encoder-only",
+      "B. Decoder-only",
+      "C. Encoder-Decoder",
+      "D. 混合"
+    ],
+    "answer": "B",
+    "analysis": "Decoder-only主导",
+    "type": "choice"
+  },
+  {
+    "id": 104,
+    "content": "Decoder-only生成当前token时____后面的token。",
+    "options": [
+      "A. 能看到",
+      "B. 看不到",
+      "C. 部分看到",
+      "D. 随机看到"
+    ],
+    "answer": "B",
+    "analysis": "Decoder不可见未来",
+    "type": "choice"
+  },
+  {
+    "id": 105,
+    "content": "微调Fine-tuning是在____基础上继续训练。",
+    "options": [
+      "A. 随机初始化",
+      "B. 预训练好的模型",
+      "C. 小模型",
+      "D. 未训练模型"
+    ],
+    "answer": "B",
+    "analysis": "微调定义",
+    "type": "choice"
+  },
+  {
+    "id": 106,
+    "content": "强化学习后训练的作用包括增强推理和____。",
+    "options": [
+      "A. 减少参数",
+      "B. 对齐Alignment",
+      "C. 加速训练",
+      "D. 减少数据"
+    ],
+    "answer": "B",
+    "analysis": "对齐",
+    "type": "choice"
+  },
+  {
+    "id": 107,
+    "content": "知识蒸馏让____学习____的能力。",
+    "options": [
+      "A. 大模型学小模型",
+      "B. 小模型Student学大模型Teacher",
+      "C. 同模型互学",
+      "D. 无学习"
+    ],
+    "answer": "B",
+    "analysis": "知识蒸馏",
+    "type": "choice"
+  },
+  {
+    "id": 108,
+    "content": "知识蒸馏的核心目的之一是____。",
+    "options": [
+      "A. 增加参数",
+      "B. 降低部署成本",
+      "C. 提高准确率",
+      "D. 加速训练"
+    ],
+    "answer": "B",
+    "analysis": "降部署成本",
+    "type": "choice"
+  },
+  {
+    "id": 109,
+    "content": "上下文学习In-context Learning____修改模型权重。",
+    "options": [],
+    "answer": "不需要",
+    "analysis": "ICL不修改权重",
+    "type": "fill"
+  },
+  {
+    "id": 110,
+    "content": "思维链CoT引导模型输出____推理步骤。",
+    "options": [],
+    "answer": "中间",
+    "analysis": "CoT推理步骤",
+    "type": "fill"
+  },
+  {
+    "id": 111,
+    "content": "缩放定律Scaling Law指模型参数、数据量、计算量增大时，测试损失按____下降。",
+    "options": [
+      "A. 线性",
+      "B. 幂律",
+      "C. 指数",
+      "D. 对数"
+    ],
+    "answer": "B",
+    "analysis": "幂律下降",
+    "type": "choice"
+  },
+  {
+    "id": 112,
+    "content": "涌现能力指模型参数达到____时才出现的能力。",
+    "options": [
+      "A. 一定规模后",
+      "B. 任意规模",
+      "C. 小规模",
+      "D. 零规模"
+    ],
+    "answer": "A",
+    "analysis": "涌现能力",
+    "type": "choice"
+  },
+  {
+    "id": 113,
+    "content": "幻觉Hallucination指生成看似合理但____虚假的内容。",
+    "options": [],
+    "answer": "错误",
+    "analysis": "幻觉定义",
+    "type": "fill"
+  },
+  {
+    "id": 114,
+    "content": "偏见Bias指模型生成内容含有歧视等____倾向。",
+    "options": [],
+    "answer": "不公平",
+    "analysis": "偏见定义",
+    "type": "fill"
+  },
+  {
+    "id": 115,
+    "content": "监督微调SFT用____方式完成。",
+    "options": [],
+    "answer": "监督",
+    "analysis": "SFT",
+    "type": "fill"
+  },
+  {
+    "id": 116,
+    "content": "提示词工程设计____引导模型。",
+    "options": [],
+    "answer": "提示词",
+    "analysis": "Prompt Engineering",
+    "type": "fill"
+  },
+  {
+    "id": 117,
+    "content": "知识蒸馏中Student学习____。",
+    "options": [],
+    "answer": "Teacher",
+    "analysis": "蒸馏概念",
+    "type": "fill"
+  },
+  {
+    "id": 118,
+    "content": "AI任务分为____型和决策型两大类。",
+    "options": [],
+    "answer": "预测",
+    "analysis": "预测和决策",
+    "type": "fill"
+  },
+  {
+    "id": 119,
+    "content": "强化学习的目标是最大化____奖励。",
+    "options": [],
+    "answer": "累计",
+    "analysis": "最大化累计奖励",
+    "type": "fill"
+  },
+  {
+    "id": 120,
+    "content": "强化学习与监督学习的核心区别是____。",
+    "options": [
+      "A. 更多数据",
+      "B. 通过奖励反馈而非标注标签学习",
+      "C. 更少参数",
+      "D. 收敛更快"
+    ],
+    "answer": "B",
+    "analysis": "奖励反馈",
+    "type": "choice"
+  },
+  {
+    "id": 121,
+    "content": "国际象棋的状态空间属于____可观测。",
+    "options": [],
+    "answer": "完全",
+    "analysis": "完全可观测",
+    "type": "fill"
+  },
+  {
+    "id": 122,
+    "content": "动作空间可分为____和连续两类。",
+    "options": [],
+    "answer": "离散",
+    "analysis": "离散和连续",
+    "type": "fill"
+  },
+  {
+    "id": 123,
+    "content": "折扣因子γ越接近0，越偏向____奖励。",
+    "options": [
+      "A. 长期",
+      "B. 即时/近期",
+      "C. 未来平均",
+      "D. 所有"
+    ],
+    "answer": "B",
+    "analysis": "γ偏向近期",
+    "type": "choice"
+  },
+  {
+    "id": 124,
+    "content": "情节型任务Episodic有明确的____。",
+    "options": [
+      "A. 无终止",
+      "B. 起点和终止状态",
+      "C. 无限循环",
+      "D. 连续序列"
+    ],
+    "answer": "B",
+    "analysis": "情节型有起止",
+    "type": "choice"
+  },
+  {
+    "id": 125,
+    "content": "连续型任务____终止状态。",
+    "options": [
+      "A. 有",
+      "B. 无",
+      "C. 有时有",
+      "D. 不确定"
+    ],
+    "answer": "B",
+    "analysis": "连续型无终止",
+    "type": "choice"
+  },
+  {
+    "id": 126,
+    "content": "只利用不探索的风险是____。",
+    "options": [
+      "A. 训练更快",
+      "B. 遗漏更高长期回报选择",
+      "C. 参数减少",
+      "D. 收敛更好"
+    ],
+    "answer": "B",
+    "analysis": "探索vs利用",
+    "type": "choice"
+  },
+  {
+    "id": 127,
+    "content": "马尔可夫性指未来状态概率分布仅依赖____状态。",
+    "options": [],
+    "answer": "当前",
+    "analysis": "马尔可夫性",
+    "type": "fill"
+  },
+  {
+    "id": 128,
+    "content": "即使给定当前状态和动作，下一状态在随机性转移下____。",
+    "options": [
+      "A. 确定",
+      "B. 仍不确定",
+      "C. 必为零",
+      "D. 不可计算"
+    ],
+    "answer": "B",
+    "analysis": "随机性转移",
+    "type": "choice"
+  },
+  {
+    "id": 129,
+    "content": "RL两类训练方法是基于策略和基于____。",
+    "options": [
+      "A. 数据",
+      "B. 价值",
+      "C. 模型",
+      "D. 奖励"
+    ],
+    "answer": "B",
+    "analysis": "基于价值",
+    "type": "choice"
+  },
+  {
+    "id": 130,
+    "content": "状态价值函数V(s)表示从状态s出发的____回报。",
+    "options": [
+      "A. 即时",
+      "B. 期望累计",
+      "C. 最大",
+      "D. 最小"
+    ],
+    "answer": "B",
+    "analysis": "期望累计回报",
+    "type": "choice"
+  },
+  {
+    "id": 131,
+    "content": "Bellman方程联系不同状态的____。",
+    "options": [
+      "A. 奖励",
+      "B. 价值",
+      "C. 动作",
+      "D. 参数"
+    ],
+    "answer": "B",
+    "analysis": "价值关系",
+    "type": "choice"
+  },
+  {
+    "id": 132,
+    "content": "动态规划DP求解RL需要知道____。",
+    "options": [
+      "A. 大量数据",
+      "B. 转移概率P",
+      "C. 神经网络",
+      "D. 随机策略"
+    ],
+    "answer": "B",
+    "analysis": "DP需转移概率",
+    "type": "choice"
+  },
+  {
+    "id": 133,
+    "content": "蒙特卡洛MC方法的缺点是____。",
+    "options": [
+      "A. 计算慢",
+      "B. 采样随机性大方差大",
+      "C. 参数过多",
+      "D. 无法使用"
+    ],
+    "answer": "B",
+    "analysis": "MC方差大",
+    "type": "choice"
+  },
+  {
+    "id": 134,
+    "content": "深度强化学习用____神经网络近似价值函数和策略。",
+    "options": [],
+    "answer": "深度",
+    "analysis": "DRL用神经网络",
+    "type": "fill"
+  },
+  {
+    "id": 135,
+    "content": "RLHF中的奖励函数由____构造。",
+    "options": [
+      "A. 机器自动",
+      "B. 人类偏好",
+      "C. 随机生成",
+      "D. 预训练模型"
+    ],
+    "answer": "B",
+    "analysis": "人类偏好构造",
+    "type": "choice"
+  },
+  {
+    "id": 136,
+    "content": "DQN用于____动作空间。",
+    "options": [
+      "A. 连续",
+      "B. 离散",
+      "C. 任意",
+      "D. 无动作"
+    ],
+    "answer": "B",
+    "analysis": "DQN离散动作",
+    "type": "choice"
+  },
+  {
+    "id": 137,
+    "content": "后训练阶段使用强化学习可提升模型的____能力。",
+    "options": [
+      "A. 文本生成",
+      "B. 推理",
+      "C. 分类",
+      "D. 翻译"
+    ],
+    "answer": "B",
+    "analysis": "提升推理能力",
+    "type": "choice"
+  },
+  {
+    "id": 138,
+    "content": "最优策略π*通过策略评估与策略改进____求解。",
+    "options": [],
+    "answer": "迭代",
+    "analysis": "最优策略",
+    "type": "fill"
+  },
+  {
+    "id": 139,
+    "content": "Bellman方程矩阵形式：V=____。",
+    "options": [],
+    "answer": "R+γPV",
+    "analysis": "Bellman公式",
+    "type": "fill"
+  },
+  {
+    "id": 140,
+    "content": "DQN用深度网络替代____拟合Q值。",
+    "options": [],
+    "answer": "Q值表",
+    "analysis": "DQN",
+    "type": "fill"
+  },
+  {
+    "id": 141,
+    "content": "RLHF奖励函数由____偏好构造。",
+    "options": [],
+    "answer": "人类",
+    "analysis": "RLHF奖励",
+    "type": "fill"
+  },
+  {
+    "id": 142,
+    "content": "AI任务分预测型和____型。",
+    "options": [],
+    "answer": "决策",
+    "analysis": "任务类型",
+    "type": "fill"
+  },
+  {
+    "id": 143,
+    "content": "批归一化BN在训练时使用____批次的统计量。",
+    "options": [],
+    "answer": "当前",
+    "analysis": "BN训练批次",
+    "type": "fill"
+  },
+  {
+    "id": 144,
+    "content": "BN在推理时使用训练计算得的____平均统计量。",
+    "options": [],
+    "answer": "移动",
+    "analysis": "BN推理移动平均",
+    "type": "fill"
+  },
+  {
+    "id": 145,
+    "content": "残差连接通过____传递梯度缓解深层梯度消失。",
+    "options": [
+      "A. 直接路径",
+      "B. 跳跃连接",
+      "C. 长程路径",
+      "D. 多路径"
+    ],
+    "answer": "B",
+    "analysis": "残差跳跃连接",
+    "type": "choice"
+  },
+  {
+    "id": 146,
+    "content": "深度可分离卷积分解为深度卷积和____两步。",
+    "options": [
+      "A. 逐点卷积1×1",
+      "B. 逐通道卷积",
+      "C. 池化",
+      "D. 全连接"
+    ],
+    "answer": "A",
+    "analysis": "深度可分离",
+    "type": "choice"
+  },
+  {
+    "id": 147,
+    "content": "1×1卷积常用于通道融合和降维。假设输入特征图为14×14×256，使用64个1×1卷积核，输出特征图尺寸为____×____×____。",
+    "options": [
+      "A. 14×14×64",
+      "B. 14×14×256",
+      "C. 7×7×64",
+      "D. 28×28×64"
+    ],
+    "answer": "A",
+    "analysis": "1×1卷积不改变空间尺寸，只改变通道数。输出尺寸=14×14×64。参数量=1×1×256×64+64=16448。",
+    "type": "choice"
+  },
+  {
+    "id": 148,
+    "content": "转置卷积用于____特征图尺寸。",
+    "options": [
+      "A. 减小",
+      "B. 增大",
+      "C. 不变",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "转置卷积上采样",
+    "type": "choice"
+  },
+  {
+    "id": 149,
+    "content": "空洞卷积通过在核元素间____扩大感受野。",
+    "options": [
+      "A. 增加权重",
+      "B. 插入空洞",
+      "C. 增加层数",
+      "D. 扩大核尺寸"
+    ],
+    "answer": "B",
+    "analysis": "空洞卷积原理",
+    "type": "choice"
+  },
+  {
+    "id": 150,
+    "content": "组卷积将输入通道分成G组。假设输入通道C_in=256，输出通道C_out=256，组数G=16，卷积核K=3×3。标准卷积参数量为3×3×256×256=589824，组卷积参数量为____。",
+    "options": [
+      "A. 36864",
+      "B. 73728",
+      "C. 18432",
+      "D. 589824"
+    ],
+    "answer": "A",
+    "analysis": "组卷积参数量=标准卷积参数量/G=589824/16=36864。每组处理256/16=16个输入通道，输出16个通道。",
+    "type": "choice"
+  },
+  {
+    "id": 151,
+    "content": "两个3×3卷积堆叠的感受野与一个5×5卷积相同。假设输入通道和输出通道都为C，一个5×5卷积参数量为5×5×C×C=25C²，两个3×3卷积参数量为____。",
+    "options": [
+      "A. 18C²",
+      "B. 9C²",
+      "C. 36C²",
+      "D. 27C²"
+    ],
+    "answer": "A",
+    "analysis": "两个3×3卷积参数量=2×(3×3×C×C)=18C²。比5×5卷积节省28%参数，同时增加了非线性变换次数。",
+    "type": "choice"
+  },
+  {
+    "id": 152,
+    "content": "FPN融合____特征处理多尺度目标。",
+    "options": [
+      "A. 同一层",
+      "B. 不同层级",
+      "C. 仅底层",
+      "D. 仅顶层"
+    ],
+    "answer": "B",
+    "analysis": "FPN多尺度融合",
+    "type": "choice"
+  },
+  {
+    "id": 153,
+    "content": "Dropout训练时____使部分神经元失活。",
+    "options": [],
+    "answer": "随机",
+    "analysis": "Dropout随机",
+    "type": "fill"
+  },
+  {
+    "id": 154,
+    "content": "迁移学习通常只微调____。",
+    "options": [
+      "A. 全部层",
+      "B. 最后几层",
+      "C. 第一层",
+      "D. 中间层"
+    ],
+    "answer": "B",
+    "analysis": "迁移微调末几层",
+    "type": "choice"
+  },
+  {
+    "id": 155,
+    "content": "BPE从基本符号迭代合并频率最高的____。",
+    "options": [
+      "A. 相邻字符",
+      "B. 相邻词元对",
+      "C. 单个字符",
+      "D. 整个单词"
+    ],
+    "answer": "B",
+    "analysis": "BPE合并相邻对",
+    "type": "choice"
+  },
+  {
+    "id": 156,
+    "content": "IMDB情感分析数据集是____任务。",
+    "options": [
+      "A. 多分类",
+      "B. 二分类",
+      "C. 回归",
+      "D. 聚类"
+    ],
+    "answer": "B",
+    "analysis": "IMDB二分类",
+    "type": "choice"
+  },
+  {
+    "id": 157,
+    "content": "Softmax输出所有类别概率之和为____。",
+    "options": [],
+    "answer": "1",
+    "analysis": "Softmax和=1",
+    "type": "fill"
+  },
+  {
+    "id": 158,
+    "content": "Softmax对输入加常数后输出____。",
+    "options": [],
+    "answer": "不变",
+    "analysis": "平移不变性",
+    "type": "fill"
+  },
+  {
+    "id": 159,
+    "content": "Transformer多头注意力中，总维度d=512，头数h=8。根据多头维度计算公式d_k=d/h，每头的维度d_k=____。",
+    "options": [
+      "A. 64",
+      "B. 128",
+      "C. 256",
+      "D. 32"
+    ],
+    "answer": "A",
+    "analysis": "多头维度计算公式：d_k=d/h。代入数值：d_k=512/8=64。每头独立计算注意力后拼接，保持总维度不变。",
+    "type": "choice"
+  },
+  {
+    "id": 160,
+    "content": "RoPE相对位置编码有更好____能力。",
+    "options": [
+      "A. 训练速度",
+      "B. 长度外推",
+      "C. 参数减少",
+      "D. 计算简化"
+    ],
+    "answer": "B",
+    "analysis": "RoPE长度外推",
+    "type": "choice"
+  },
+  {
+    "id": 161,
+    "content": "多尺度网络通过对____拉伸变换加速高频学习。",
+    "options": [
+      "A. 权重",
+      "B. 输入坐标",
+      "C. 激活值",
+      "D. 梯度"
+    ],
+    "answer": "B",
+    "analysis": "坐标拉伸",
+    "type": "choice"
+  },
+  {
+    "id": 162,
+    "content": "Fourier特征映射引入____函数将输入映射到频域。",
+    "options": [
+      "A. 线性",
+      "B. sin和cos",
+      "C. ReLU",
+      "D. Sigmoid"
+    ],
+    "answer": "B",
+    "analysis": "Fourier映射",
+    "type": "choice"
+  },
+  {
+    "id": 163,
+    "content": "小初始化符合频率原则，先学____。",
+    "options": [
+      "A. 低频",
+      "B. 高频",
+      "C. 全部",
+      "D. 随机"
+    ],
+    "answer": "A",
+    "analysis": "初始化和频率",
+    "type": "choice"
+  },
+  {
+    "id": 164,
+    "content": "大初始化可能破坏频率原则导致____。",
+    "options": [
+      "A. 加速收敛",
+      "B. 高频振荡泛化差",
+      "C. 节约参数",
+      "D. 泛化好"
+    ],
+    "answer": "B",
+    "analysis": "大初始化问题",
+    "type": "choice"
+  },
+  {
+    "id": 165,
+    "content": "注意力机制分为通道注意力和____注意力。",
+    "options": [
+      "A. 时间",
+      "B. 空间",
+      "C. 频率",
+      "D. 深度"
+    ],
+    "answer": "B",
+    "analysis": "空间注意力",
+    "type": "choice"
+  },
+  {
+    "id": 166,
+    "content": "感受野表示输出像素对应____的区域大小。",
+    "options": [
+      "A. 输入图像上",
+      "B. 特征图上",
+      "C. 下一层",
+      "D. 输出上"
+    ],
+    "answer": "A",
+    "analysis": "感受野定义",
+    "type": "choice"
+  },
+  {
+    "id": 167,
+    "content": "过拟合表现：训练好但____差。",
+    "options": [
+      "A. 测试表现",
+      "B. 训练表现",
+      "C. 验证表现",
+      "D. 推理速度"
+    ],
+    "answer": "A",
+    "analysis": "过拟合",
+    "type": "choice"
+  },
+  {
+    "id": 168,
+    "content": "一个RNN网络，输入维度d_x=10，隐藏层维度d_h=20，输出维度d_y=5。RNN参数量公式为：U(d_x×d_h) + W(d_h×d_h) + V(d_h×d_y) + b_h(d_h) + b_y(d_y)。计算总参数量为____。",
+    "options": [
+      "A. 830",
+      "B. 725",
+      "C. 650",
+      "D. 920"
+    ],
+    "answer": "A",
+    "analysis": "计算过程：U=10×20=200，W=20×20=400，V=20×5=100，b_h=20，b_y=5。总参数量=200+400+100+20+5=830。",
+    "type": "choice"
+  },
+  {
+    "id": 169,
+    "content": "LSTM三个门为遗忘门、输入门和____门。",
+    "options": [
+      "A. 控制门",
+      "B. 输出门",
+      "C. 存储门",
+      "D. 传递门"
+    ],
+    "answer": "B",
+    "analysis": "LSTM三门",
+    "type": "choice"
+  },
+  {
+    "id": 170,
+    "content": "Transformer位置编码先加还是后加？",
+    "options": [
+      "A. 先加位置编码",
+      "B. 先Embedding后位置编码",
+      "C. 同时加",
+      "D. 无所谓"
+    ],
+    "answer": "B",
+    "analysis": "位置编码顺序",
+    "type": "choice"
+  },
+  {
+    "id": 171,
+    "content": "Encoder-Decoder架构中，Encoder将输入序列编码为____。",
+    "options": [
+      "A. 概率向量",
+      "B. 上下文向量context vector",
+      "C. 词向量",
+      "D. 特征图"
+    ],
+    "answer": "B",
+    "analysis": "context vector",
+    "type": "choice"
+  },
+  {
+    "id": 172,
+    "content": "上下文向量在Encoder-Decoder中作为Decoder的____输入。",
+    "options": [
+      "A. 初始",
+      "B. 额外",
+      "C. 唯一",
+      "D. 无"
+    ],
+    "answer": "B",
+    "analysis": "Decoder额外输入",
+    "type": "choice"
+  },
+  {
+    "id": 173,
+    "content": "交叉注意力cross-attention中，K和V来自____。",
+    "options": [
+      "A. 当前序列",
+      "B. Encoder输出",
+      "C. Decoder",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "Cross-attention",
+    "type": "choice"
+  },
+  {
+    "id": 174,
+    "content": "Self-attention中Q、K、V来自____。",
+    "options": [
+      "A. 不同来源",
+      "B. 同一输入序列",
+      "C. 外部",
+      "D. 预训练"
+    ],
+    "answer": "B",
+    "analysis": "Self-attention",
+    "type": "choice"
+  },
+  {
+    "id": 175,
+    "content": "KV cache用于____阶段加速。",
+    "options": [
+      "A. 训练",
+      "B. 推理",
+      "C. 测试",
+      "D. 验证"
+    ],
+    "answer": "B",
+    "analysis": "KV cache推理",
+    "type": "choice"
+  },
+  {
+    "id": 176,
+    "content": "量化Quantization用于减少模型____。",
+    "options": [
+      "A. 精度",
+      "B. 参数存储量和计算量",
+      "C. 准确率",
+      "D. 训练时间"
+    ],
+    "answer": "B",
+    "analysis": "量化压缩",
+    "type": "choice"
+  },
+  {
+    "id": 177,
+    "content": "Flash Attention通过优化____提高效率。",
+    "options": [
+      "A. 参数量",
+      "B. 注意力计算内存访问",
+      "C. 训练步数",
+      "D. 数据量"
+    ],
+    "answer": "B",
+    "analysis": "Flash Attention",
+    "type": "choice"
+  },
+  {
+    "id": 178,
+    "content": "混合专家MoE通过____提升模型容量。",
+    "options": [
+      "A. 增加参数",
+      "B. 动态选择子模型",
+      "C. 减少参数",
+      "D. 固定路由"
+    ],
+    "answer": "B",
+    "analysis": "MoE",
+    "type": "choice"
+  },
+  {
+    "id": 179,
+    "content": "梯度裁剪Gradient Clipping防止____。",
+    "options": [
+      "A. 梯度消失",
+      "B. 梯度爆炸",
+      "C. 过拟合",
+      "D. 欠拟合"
+    ],
+    "answer": "B",
+    "analysis": "梯度裁剪",
+    "type": "choice"
+  },
+  {
+    "id": 180,
+    "content": "学习率衰减Learning Rate Decay的作用是____。",
+    "options": [
+      "A. 加快训练",
+      "B. 后期稳定收敛",
+      "C. 增加参数",
+      "D. 减少数据"
+    ],
+    "answer": "B",
+    "analysis": "学习率衰减",
+    "type": "choice"
+  },
+  {
+    "id": 181,
+    "content": "模型参数量大时通常用____并行训练。",
+    "options": [
+      "A. 数据",
+      "B. 模型",
+      "C. 流水线",
+      "D. 以上都对"
+    ],
+    "answer": "D",
+    "analysis": "大规模训练并行",
+    "type": "choice"
+  },
+  {
+    "id": 182,
+    "content": "预训练Pretrain用____数据训练。",
+    "options": [
+      "A. 少量标注",
+      "B. 大量无标注",
+      "C. 少量无标注",
+      "D. 大量标注"
+    ],
+    "answer": "B",
+    "analysis": "预训练数据",
+    "type": "choice"
+  },
+  {
+    "id": 183,
+    "content": "有监督微调SFT用____数据训练。",
+    "options": [
+      "A. 大量无标注",
+      "B. 少量高质量标注",
+      "C. 随机",
+      "D. 测试"
+    ],
+    "answer": "B",
+    "analysis": "SFT数据",
+    "type": "choice"
+  },
+  {
+    "id": 184,
+    "content": "RAG检索增强生成通过____获取外部知识。",
+    "options": [
+      "A. 调用API",
+      "B. 检索文档库",
+      "C. 生成虚构内容",
+      "D. 翻词典"
+    ],
+    "answer": "B",
+    "analysis": "RAG检索",
+    "type": "choice"
+  },
+  {
+    "id": 185,
+    "content": "Adapter微调在____插入小网络。",
+    "options": [
+      "A. 不修改原权重",
+      "B. 替换原权重",
+      "C. 删除原权重",
+      "D. 覆盖原权重"
+    ],
+    "answer": "A",
+    "analysis": "Adapter不修改权重",
+    "type": "choice"
+  },
+  {
+    "id": 186,
+    "content": "Prefix Tuning在输入前加____。",
+    "options": [
+      "A. 硬编码",
+      "B. 可训练前缀向量",
+      "C. 特殊标签",
+      "D. 随机值"
+    ],
+    "answer": "B",
+    "analysis": "Prefix Tuning",
+    "type": "choice"
+  },
+  {
+    "id": 187,
+    "content": "LoRA低秩适配将权重更新分解为____。",
+    "options": [
+      "A. 两个小矩阵乘积",
+      "B. 一个大矩阵",
+      "C. 对角矩阵",
+      "D. 单位矩阵"
+    ],
+    "answer": "A",
+    "analysis": "LoRA原理",
+    "type": "choice"
+  },
+  {
+    "id": 188,
+    "content": "感受野表示输出像素对应____上的区域大小。",
+    "options": [],
+    "answer": "输入图像",
+    "analysis": "感受野",
+    "type": "fill"
+  },
+  {
+    "id": 189,
+    "content": "过拟合表现：训练集好但____差。",
+    "options": [],
+    "answer": "测试集",
+    "analysis": "过拟合",
+    "type": "fill"
+  },
+  {
+    "id": 190,
+    "content": "欠拟合表现：训练集和____都表现不佳。",
+    "options": [],
+    "answer": "验证集",
+    "analysis": "欠拟合",
+    "type": "fill"
+  },
+  {
+    "id": 191,
+    "content": "KV cache用于加速____阶段的计算。",
+    "options": [],
+    "answer": "推理",
+    "analysis": "KV cache",
+    "type": "fill"
+  },
+  {
+    "id": 192,
+    "content": "Transformer中cross-attention的K和V来自____。",
+    "options": [],
+    "answer": "Encoder",
+    "analysis": "Cross-attention",
+    "type": "fill"
+  },
+  {
+    "id": 193,
+    "content": "FFN在Transformer中____位置共享参数。",
+    "options": [],
+    "answer": "逐",
+    "analysis": "FFN逐位置",
+    "type": "fill"
+  },
+  {
+    "id": 194,
+    "content": "梯度裁剪防止____。",
+    "options": [],
+    "answer": "梯度爆炸",
+    "analysis": "梯度裁剪",
+    "type": "fill"
+  },
+  {
+    "id": 195,
+    "content": "量化Quantization减少模型____。",
+    "options": [],
+    "answer": "存储",
+    "analysis": "量化",
+    "type": "fill"
+  },
+  {
+    "id": 196,
+    "content": "MoE混合专家通过选择____专家提升容量。",
+    "options": [],
+    "answer": "激活",
+    "analysis": "MoE",
+    "type": "fill"
+  },
+  {
+    "id": 197,
+    "content": "RAG通过____获取外部知识。",
+    "options": [],
+    "answer": "检索文档",
+    "analysis": "RAG",
+    "type": "fill"
+  },
+  {
+    "id": 198,
+    "content": "LoRA将权重更新分解____。",
+    "options": [],
+    "answer": "两小矩阵",
+    "analysis": "LoRA",
+    "type": "fill"
+  },
+  {
+    "id": 199,
+    "content": "Prefix Tuning加____特殊前缀。",
+    "options": [],
+    "answer": "可训练",
+    "analysis": "Prefix Tuning",
+    "type": "fill"
+  },
+  {
+    "id": 200,
+    "content": "Adapter在层间插入____。",
+    "options": [],
+    "answer": "小网络",
+    "analysis": "Adapter",
+    "type": "fill"
+  },
+  {
+    "id": 201,
+    "content": "KV cache加速____阶段。",
+    "options": [],
+    "answer": "推理",
+    "analysis": "KV cache",
+    "type": "fill"
+  },
+  {
+    "id": 202,
+    "content": "图像数据中，像素关联性随距离增大而减弱，这种特性被称为____。",
+    "options": [
+      "A. 局部关联性",
+      "B. 长程关联性",
+      "C. 周期性",
+      "D. 稀疏性"
+    ],
+    "answer": "B",
+    "analysis": "图像数据具有长程关联性，像素之间的依赖关系会随距离增大而减弱",
+    "type": "choice"
+  },
+  {
+    "id": 203,
+    "content": "卷积核的核心作用是____。",
+    "options": [
+      "A. 增加参数量",
+      "B. 减少参数量并利用局部性",
+      "C. 降低计算效率",
+      "D. 增加输入维度"
+    ],
+    "answer": "B",
+    "analysis": "卷积核共享参数，大幅减少参数量，同时利用图像的空间局部性",
+    "type": "choice"
+  },
+  {
+    "id": 204,
+    "content": "假设一个卷积层输入特征图尺寸为28×28，使用3×3的卷积核，padding=1，stride=1。根据卷积输出尺寸公式O=(I-K+2P)/S+1，计算输出特征图尺寸为____×____。",
+    "options": [
+      "A. 26×26",
+      "B. 28×28",
+      "C. 24×24",
+      "D. 30×30"
+    ],
+    "answer": "B",
+    "analysis": "卷积输出尺寸公式：O=(I-K+2P)/S+1。代入数值：O=(28-3+2×1)/1+1=(27)/1+1=28。因此输出尺寸为28×28。当padding=(K-1)/2且stride=1时，输出尺寸保持不变。",
+    "type": "choice"
+  },
+  {
+    "id": 205,
+    "content": "池化层的主要作用是____。",
+    "options": [
+      "A. 增加特征图尺寸",
+      "B. 下采样并逐渐处理更长关联",
+      "C. 增加参数量",
+      "D. 引入非线性"
+    ],
+    "answer": "B",
+    "analysis": "池化层进行下采样，降低空间分辨率，同时逐渐处理更长范围的特征关联",
+    "type": "choice"
+  },
+  {
+    "id": 206,
+    "content": "CNN的标准流程依次为____。",
+    "options": [
+      "A. 池化→卷积→激活→全连接",
+      "B. 卷积→激活→池化→展平→全连接",
+      "C. 全连接→卷积→池化",
+      "D. 激活→卷积→全连接"
+    ],
+    "answer": "B",
+    "analysis": "CNN标准流程：卷积提取特征→激活引入非线性→池化降采样→展平→全连接分类",
+    "type": "choice"
+  },
+  {
+    "id": 207,
+    "content": "自然语言具有____特性，如从句套从句的嵌套结构。",
+    "options": [
+      "A. 线性",
+      "B. 递归性",
+      "C. 对称性",
+      "D. 交换性"
+    ],
+    "answer": "B",
+    "analysis": "自然语言具有递归性，允许嵌套结构",
+    "type": "choice"
+  },
+  {
+    "id": 208,
+    "content": "BPE从基本符号开始，迭代合并____最高的相邻词元对。",
+    "options": [
+      "A. 出现频率",
+      "B. 共现频率",
+      "C. 长度",
+      "D. 重要性"
+    ],
+    "answer": "B",
+    "analysis": "BPE原理：从基本字符出发，逐步合并共现频率最高的相邻词元对",
+    "type": "choice"
+  },
+  {
+    "id": 209,
+    "content": "词嵌入将高维one-hot向量转换为____的稠密向量。",
+    "options": [
+      "A. 更高维",
+      "B. 较低维",
+      "C. 相同维",
+      "D. 稀疏"
+    ],
+    "answer": "B",
+    "analysis": "词嵌入降维，将高维稀疏one-hot转换为低维稠密向量",
+    "type": "choice"
+  },
+  {
+    "id": 210,
+    "content": "NTP训练使用____作为标签，无需人工标注。",
+    "options": [
+      "A. 前一个token",
+      "B. 下一个token",
+      "C. 随机token",
+      "D. 特殊token"
+    ],
+    "answer": "B",
+    "analysis": "Next Token Prediction预测下一个token作为自监督学习目标",
+    "type": "choice"
+  },
+  {
+    "id": 211,
+    "content": "RNN处理变长序列的核心是____。",
+    "options": [
+      "A. 不同时间步共享权重",
+      "B. 每个时间步独立参数",
+      "C. 固定输入尺寸",
+      "D. 无循环连接"
+    ],
+    "answer": "A",
+    "analysis": "RNN通过不同时间步共享同一组权重(U/W/V)来处理变长序列",
+    "type": "choice"
+  },
+  {
+    "id": 212,
+    "content": "BPTT梯度消失/爆炸的根本原因是____。",
+    "options": [
+      "A. 参数过多",
+      "B. 多时间步链式连乘",
+      "C. 学习率太大",
+      "D. 数据太少"
+    ],
+    "answer": "B",
+    "analysis": "BPTT在反向传播时梯度经过多个时间步的链式连乘，导致梯度消失或爆炸",
+    "type": "choice"
+  },
+  {
+    "id": 213,
+    "content": "LSTM引入的关键设计是____。",
+    "options": [
+      "A. 更深的网络",
+      "B. 记忆状态cell state+门控机制",
+      "C. 注意力机制",
+      "D. 残差连接"
+    ],
+    "answer": "B",
+    "analysis": "LSTM通过cell state和三个门控(遗忘门、输入门、输出门)解决梯度消失问题",
+    "type": "choice"
+  },
+  {
+    "id": 214,
+    "content": "Transformer的两大核心优势是____。",
+    "options": [
+      "A. 更少参数和更快训练",
+      "B. 全局依赖和高效并行计算",
+      "C. 更简单结构",
+      "D. 更强非线性"
+    ],
+    "answer": "B",
+    "analysis": "Transformer通过自注意力实现全局依赖建模，且计算可高度并行",
+    "type": "choice"
+  },
+  {
+    "id": 215,
+    "content": "缩放点积注意力中除以√d_k是为了____。",
+    "options": [
+      "A. 加速运算",
+      "B. 防止Softmax梯度饱和",
+      "C. 减少参数",
+      "D. 正则化"
+    ],
+    "answer": "B",
+    "analysis": "除以√d_k防止点积过大导致Softmax输出过于极端，梯度接近零",
+    "type": "choice"
+  },
+  {
+    "id": 216,
+    "content": "因果掩码Causal Mask的作用是____。",
+    "options": [
+      "A. 加速训练",
+      "B. 屏蔽未来token防止信息泄露",
+      "C. 减少内存",
+      "D. 增加参数"
+    ],
+    "answer": "B",
+    "analysis": "因果掩码确保生成当前token时无法看到未来的token",
+    "type": "choice"
+  },
+  {
+    "id": 217,
+    "content": "Transformer输入表示由____组成。",
+    "options": [
+      "A. 仅Embedding",
+      "B. Embedding加上位置编码",
+      "C. 仅位置编码",
+      "D. Embedding乘以位置编码"
+    ],
+    "answer": "B",
+    "analysis": "先做Embedding再加上位置编码，两者相加构成输入表示",
+    "type": "choice"
+  },
+  {
+    "id": 218,
+    "content": "LayerNorm对每个token的____维度进行标准化。",
+    "options": [
+      "A. 序列",
+      "B. 特征",
+      "C. 批次",
+      "D. 空间"
+    ],
+    "answer": "B",
+    "analysis": "LayerNorm对每个token的特征维度进行标准化",
+    "type": "choice"
+  },
+  {
+    "id": 219,
+    "content": "残差连接公式为____。",
+    "options": [
+      "A. y=F(x)",
+      "B. y=x+F(x)",
+      "C. y=x×F(x)",
+      "D. y=F(x)-x"
+    ],
+    "answer": "B",
+    "analysis": "残差连接：y=x+F(x)，使网络易学恒等映射",
+    "type": "choice"
+  },
+  {
+    "id": 220,
+    "content": "频率原则指神经网络按____顺序学习。",
+    "options": [
+      "A. 高频到低频",
+      "B. 低频到高频",
+      "C. 随机",
+      "D. 同时学习"
+    ],
+    "answer": "B",
+    "analysis": "频率原则：神经网络先学习低频成分(轮廓)，再学习高频成分(细节)",
+    "type": "choice"
+  },
+  {
+    "id": 221,
+    "content": "早停Early Stopping的原理是____。",
+    "options": [
+      "A. 在训练开始时停止",
+      "B. 在模型开始拟合高频噪声前停止",
+      "C. 随机停止",
+      "D. 达到固定epoch后停止"
+    ],
+    "answer": "B",
+    "analysis": "早停在测试误差开始上升前停止训练，防止过拟合高频噪声",
+    "type": "choice"
+  },
+  {
+    "id": 222,
+    "content": "图像分类中的频率指的是____的频率。",
+    "options": [
+      "A. 图像像素值",
+      "B. 分类函数",
+      "C. 卷积核",
+      "D. 池化操作"
+    ],
+    "answer": "B",
+    "analysis": "分类问题讨论的频率是指分类函数的频率，而非图像内部像素频率",
+    "type": "choice"
+  },
+  {
+    "id": 223,
+    "content": "对抗噪声通常沿分类函数的____方向添加。",
+    "options": [
+      "A. 低频成分",
+      "B. 高频成分",
+      "C. 任意方向",
+      "D. 零梯度"
+    ],
+    "answer": "B",
+    "analysis": "对抗噪声沿分类函数高频成分方向添加，易导致分类错误",
+    "type": "choice"
+  },
+  {
+    "id": 224,
+    "content": "凝聚现象Condensation指____初始化下神经元趋同。",
+    "options": [
+      "A. 大",
+      "B. 小",
+      "C. 中等",
+      "D. 零"
+    ],
+    "answer": "B",
+    "analysis": "小初始化下，同层神经元方向趋同，有效神经元数量减少",
+    "type": "choice"
+  },
+  {
+    "id": 225,
+    "content": "平坦解相比尖锐解____。",
+    "options": [
+      "A. 训练损失更低",
+      "B. 更鲁棒、泛化更好",
+      "C. 参数更少",
+      "D. 更快收敛"
+    ],
+    "answer": "B",
+    "analysis": "平坦解附近损失变化缓慢，对参数扰动更鲁棒，泛化性能更好",
+    "type": "choice"
+  },
+  {
+    "id": 226,
+    "content": "小批量SGD更易找到平坦解是因为____。",
+    "options": [
+      "A. 计算快",
+      "B. 随机性强，有助于逃离尖锐区域",
+      "C. 参数少",
+      "D. 梯度大"
+    ],
+    "answer": "B",
+    "analysis": "小批量SGD引入的随机性更强，有助于跳出尖锐解区域",
+    "type": "choice"
+  },
+  {
+    "id": 227,
+    "content": "大模型又称____。",
+    "options": [
+      "A. 通用模型",
+      "B. 基础模型Foundation Model",
+      "C. 小型模型",
+      "D. 专用模型"
+    ],
+    "answer": "B",
+    "analysis": "大模型即基础模型(Foundation Model)，参数量大、泛化能力强",
+    "type": "choice"
+  },
+  {
+    "id": 228,
+    "content": "Encoder-only架构不使用causal mask，更适合____任务。",
+    "options": [
+      "A. 生成",
+      "B. 理解",
+      "C. 翻译",
+      "D. 摘要"
+    ],
+    "answer": "B",
+    "analysis": "Encoder-only能看到全部上下文，适合理解类任务(分类/分析)",
+    "type": "choice"
+  },
+  {
+    "id": 229,
+    "content": "Decoder-only架构使用causal mask，更适合____任务。",
+    "options": [
+      "A. 分类",
+      "B. 理解",
+      "C. 生成",
+      "D. 回归"
+    ],
+    "answer": "C",
+    "analysis": "Decoder-only通过因果掩码实现自回归生成，适合文本生成任务",
+    "type": "choice"
+  },
+  {
+    "id": 230,
+    "content": "监督微调SFT使用____数据进行训练。",
+    "options": [
+      "A. 大量无标注",
+      "B. 少量高质量标注",
+      "C. 随机数据",
+      "D. 测试数据"
+    ],
+    "answer": "B",
+    "analysis": "SFT使用少量高质量标注数据对预训练模型进行微调",
+    "type": "choice"
+  },
+  {
+    "id": 231,
+    "content": "知识蒸馏的目的是让____学习____的能力。",
+    "options": [
+      "A. 大模型学小模型",
+      "B. 小模型Student学大模型Teacher",
+      "C. 同模型互学",
+      "D. 无学习"
+    ],
+    "answer": "B",
+    "analysis": "知识蒸馏：小模型(Student)学习大模型(Teacher)的泛化能力",
+    "type": "choice"
+  },
+  {
+    "id": 232,
+    "content": "上下文学习In-context Learning____修改模型权重。",
+    "options": [
+      "A. 需要",
+      "B. 不需要",
+      "C. 部分需要",
+      "D. 完全重置"
+    ],
+    "answer": "B",
+    "analysis": "ICL仅通过提示和少量示例应用新任务，不修改模型权重",
+    "type": "choice"
+  },
+  {
+    "id": 233,
+    "content": "思维链CoT引导模型____。",
+    "options": [
+      "A. 直接输出答案",
+      "B. 输出中间推理步骤",
+      "C. 减少输出",
+      "D. 加快生成"
+    ],
+    "answer": "B",
+    "analysis": "CoT引导模型输出中间推理步骤，显著提升复杂任务表现",
+    "type": "choice"
+  },
+  {
+    "id": 234,
+    "content": "缩放定律Scaling Law指模型规模增大时测试损失按____下降。",
+    "options": [
+      "A. 线性",
+      "B. 幂律",
+      "C. 指数",
+      "D. 对数"
+    ],
+    "answer": "B",
+    "analysis": "缩放定律：模型参数、数据量、计算量增大时，测试损失按幂律下降",
+    "type": "choice"
+  },
+  {
+    "id": 235,
+    "content": "涌现能力指模型参数达到____时才出现的能力。",
+    "options": [
+      "A. 一定规模后",
+      "B. 任意规模",
+      "C. 小规模",
+      "D. 零规模"
+    ],
+    "answer": "A",
+    "analysis": "涌现能力在模型规模达到一定阈值后才出现",
+    "type": "choice"
+  },
+  {
+    "id": 236,
+    "content": "幻觉Hallucination指生成____的内容。",
+    "options": [
+      "A. 完全正确",
+      "B. 看似合理但错误虚假",
+      "C. 随机",
+      "D. 空白"
+    ],
+    "answer": "B",
+    "analysis": "幻觉即生成看似合理但实际上错误的内容",
+    "type": "choice"
+  },
+  {
+    "id": 237,
+    "content": "强化学习的目标是最大化____。",
+    "options": [
+      "A. 准确率",
+      "B. 累计奖励",
+      "C. 即时奖励",
+      "D. 精确率"
+    ],
+    "answer": "B",
+    "analysis": "强化学习通过在动态环境中采取行动，最大化长期累计奖励",
+    "type": "choice"
+  },
+  {
+    "id": 238,
+    "content": "强化学习与监督学习的核心区别是____。",
+    "options": [
+      "A. 更多数据",
+      "B. 通过奖励反馈而非标注标签学习",
+      "C. 更少参数",
+      "D. 收敛更快"
+    ],
+    "answer": "B",
+    "analysis": "强化学习通过奖励信号学习，监督学习通过标注标签学习",
+    "type": "choice"
+  },
+  {
+    "id": 239,
+    "content": "马尔可夫性指未来状态的概率分布____。",
+    "options": [
+      "A. 依赖完整历史",
+      "B. 仅依赖当前状态",
+      "C. 依赖未来状态",
+      "D. 随机"
+    ],
+    "answer": "B",
+    "analysis": "马尔可夫性：未来状态仅依赖当前状态，与过去历史无关",
+    "type": "choice"
+  },
+  {
+    "id": 240,
+    "content": "状态价值函数V(s)表示从状态s出发的____回报。",
+    "options": [
+      "A. 即时",
+      "B. 期望累计",
+      "C. 最大",
+      "D. 最小"
+    ],
+    "answer": "B",
+    "analysis": "状态价值函数V(s)是在策略π下从状态s出发的期望累计回报",
+    "type": "choice"
+  },
+  {
+    "id": 241,
+    "content": "Bellman方程联系不同状态的____。",
+    "options": [
+      "A. 奖励",
+      "B. 价值",
+      "C. 动作",
+      "D. 参数"
+    ],
+    "answer": "B",
+    "analysis": "Bellman方程建立了不同状态价值之间的递归关系",
+    "type": "choice"
+  },
+  {
+    "id": 242,
+    "content": "动态规划DP求解RL需要知道____。",
+    "options": [
+      "A. 大量数据",
+      "B. 转移概率P",
+      "C. 神经网络",
+      "D. 随机策略"
+    ],
+    "answer": "B",
+    "analysis": "DP方法需要知道完整的环境模型(转移概率P)",
+    "type": "choice"
+  },
+  {
+    "id": 243,
+    "content": "深度强化学习用____近似价值函数和策略。",
+    "options": [
+      "A. 线性模型",
+      "B. 深度神经网络",
+      "C. 决策树",
+      "D. 规则"
+    ],
+    "answer": "B",
+    "analysis": "深度强化学习使用深度神经网络来近似价值函数和策略",
+    "type": "choice"
+  },
+  {
+    "id": 244,
+    "content": "DQN用于____动作空间。",
+    "options": [
+      "A. 连续",
+      "B. 离散",
+      "C. 任意",
+      "D. 无动作"
+    ],
+    "answer": "B",
+    "analysis": "DQN适合处理离散动作空间",
+    "type": "choice"
+  },
+  {
+    "id": 245,
+    "content": "RLHF中的奖励函数由____构造。",
+    "options": [
+      "A. 机器自动",
+      "B. 人类偏好",
+      "C. 随机生成",
+      "D. 预训练模型"
+    ],
+    "answer": "B",
+    "analysis": "RLHF奖励函数由人类偏好数据构造",
+    "type": "choice"
+  },
+  {
+    "id": 246,
+    "content": "图像数据的幂律衰减可理解为无穷多个不同半衰期的____之和。",
+    "options": [],
+    "answer": "指数衰减",
+    "analysis": "幂律衰减=无穷多指数衰减之和",
+    "type": "fill"
+  },
+  {
+    "id": 247,
+    "content": "网络拟合顺序是先学____再学____。",
+    "options": [],
+    "answer": "轮廓；细节",
+    "analysis": "频率原则导致先学习低频轮廓，后学习高频细节",
+    "type": "fill"
+  },
+  {
+    "id": 248,
+    "content": "平坦解附近损失变化____，对扰动更鲁棒。",
+    "options": [],
+    "answer": "慢",
+    "analysis": "平坦解的特点是损失曲面平缓，参数扰动影响小",
+    "type": "fill"
+  },
+  {
+    "id": 249,
+    "content": "最优策略π*通过策略评估与策略改进____求解。",
+    "options": [],
+    "answer": "迭代",
+    "analysis": "通过迭代进行策略评估和策略改进，收敛到最优策略",
+    "type": "fill"
+  },
+  {
+    "id": 250,
+    "content": "Bellman方程矩阵形式：V=____。",
+    "options": [],
+    "answer": "R+γPV",
+    "analysis": "Bellman方程矩阵形式：V = R + γPV",
+    "type": "fill"
+  }
+]

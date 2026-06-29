@@ -1,0 +1,333 @@
+[
+  {
+    "section": "第13–14节  卷积神经网络（CNN）",
+    "subtopics": [
+      {
+        "title": "一、图像数据的特性（CNN 的设计动机）",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 生物启发：初级视觉皮层 V1 中，简单细胞对位置/边缘敏感(有特定感受野)，复杂细胞整合多个简单细胞的输入；卷积层≈简单细胞，全连接层≈复杂细胞。"
+        ]
+      },
+      {
+        "title": "二、卷积运算与卷积层",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "权重共享：同一个卷积核在整张图上滑动复用，作用是减少参数量并利用空间局部性(这是卷积最核心的作用)。"
+        ]
+      },
+      {
+        "title": "三、输出尺寸计算",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "四、池化层 Pooling",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "五、CNN 整体结构",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 第一层卷积通常提取方向、边缘等底层特征，与生物视觉系统一致。"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "第15–16节  循环神经网络（RNN）与 NLP 基础",
+    "subtopics": [
+      {
+        "title": "一、自然语言处理(NLP)的特点与传统模型局限",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "二、数据准备",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 质量过滤：启发式规则、分类器方法；数据去重可在句子/文档/数据集级别，用精确或近似匹配。"
+        ]
+      },
+      {
+        "title": "三、词元化（分词 Tokenization）",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 BPE 思想：从基本字符出发，迭代地把语料中共现频率最高的相邻词元对合并为新词元。"
+        ]
+      },
+      {
+        "title": "四、独热编码与词嵌入(Embedding)",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 Johnson–Lindenstrauss 随机投影引理：可用随机线性映射降到远低于原维数的空间，且近似保持点间距离。"
+        ]
+      },
+      {
+        "title": "五、Next Token Prediction(NTP) 框架（RNN 与 Transformer 共用）",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "六、循环神经网络 RNN",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "处理任意长度序列的核心原因：不同时间步共享同一组权重参数(U/W/V)，参数量不随序列长度增加。"
+        ]
+      },
+      {
+        "title": "七、BPTT 与梯度问题",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "BPTT 核心固有问题：随时间反向传播时，梯度经多个时间步链式连乘，极易出现梯度消失或梯度爆炸，长程记忆难以学习。"
+        ]
+      },
+      {
+        "title": "八、长短期记忆网络 LSTM",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 Ilya 把 LSTM 比作旋转 90° 的 ResNet(记忆状态相当于残差连接传递信息)。"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "第17–18节  Transformer",
+    "subtopics": [
+      {
+        "title": "一、为什么需要 Transformer",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "二、注意力机制（核心）",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "三、嵌入与位置编码",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "四、LayerNorm 与残差连接",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "五、前馈网络 FFN",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "六、输出层",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "七、整体流程",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 多头注意力：不同的头提取不一样的信息(如有的头提取家庭信息、有的提取工作信息)——本课了解其作为捕捉全局语义的机制即可。"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "第19–20节  神经网络训练现象之一：频率原则",
+    "subtopics": [
+      {
+        "title": "一、泛化谜团与隐式偏好",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "二、频率的概念",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "三、频率原则(Frequency Principle / Spectral bias)（核心）",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "四、频率原则与过参数化",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "五、早停(Early Stopping)",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "六、图像分类中的两种频率（易错）",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 加速高频学习：拉伸可把高频函数变换为低频函数(频率反映输出对输入变化的敏感程度)，这是多尺度网络的思想。"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "第21–22节  神经网络训练现象之二：凝聚现象与解的平坦性",
+    "subtopics": [
+      {
+        "title": "一、初始化对训练的影响",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "二、ReLU 神经元与转折点",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "三、凝聚现象(Condensation)",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 实证：ResNet18 某层把每个卷积核看作一个单元，训练末期两两余弦相似度接近 1(初始时无凝聚)，说明真实网络中确有凝聚。"
+        ]
+      },
+      {
+        "title": "四、为什么不直接训练小网络",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "五、解的平坦性(Flatness)",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      }
+    ]
+  },
+  {
+    "section": "第23–24节  大模型介绍",
+    "subtopics": [
+      {
+        "title": "一、什么是大模型",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "二、三种架构（重点）",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 Encoder-only 因双向、能看到后文，不适合做“只看前文”的 Next Token Prediction 训练。"
+        ]
+      },
+      {
+        "title": "三、训练流程中的关键技术",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 其他相关技术(了解名称即可)：RAG(检索增强生成)、MCP、AI Agent、Harness 等。"
+        ]
+      },
+      {
+        "title": "四、大模型的现象",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 推理能力评估基准：MMLU(多任务理解)、GSM8K(数学推理)、HumanEval(编程)；也可用人工评估。应用：文本/代码生成、翻译、问答、文生图、文生视频等。"
+        ]
+      }
+    ]
+  },
+  {
+    "section": "第25–26节  强化学习",
+    "subtopics": [
+      {
+        "title": "一、强化学习概念",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "与监督学习的核心区别：强化学习通过奖励反馈学习，而非依赖标注标签。"
+        ]
+      },
+      {
+        "title": "二、基本要素",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "三、任务类型",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "四、探索与利用",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "五、马尔可夫决策过程(MDP)",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "两类训练方法：基于策略(直接学该采取什么动作) vs 基于价值(学哪种状态更有价值，本课重点)。"
+        ]
+      },
+      {
+        "title": "六、价值函数与 Bellman 方程",
+        "coverage": 0,
+        "status": "gap",
+        "details": []
+      },
+      {
+        "title": "七、求解 RL 问题的方法",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 时序差分(TD)：结合 MC 的采样与 DP 的思想，做一步采样(TD/Sarsa/Q-learning 推导属阅读材料，不考)。"
+        ]
+      },
+      {
+        "title": "八、深度强化学习",
+        "coverage": 0,
+        "status": "gap",
+        "details": [
+          "【了解】 应用：Atari 游戏、机器人控制、无人驾驶、推荐系统等；2025 年图灵奖授予强化学习。"
+        ]
+      }
+    ]
+  }
+]
