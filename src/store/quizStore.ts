@@ -19,6 +19,7 @@ export interface AnswerRecord {
 
 export interface QuizState {
   questions: Question[];
+  originalQuestions: Question[];
   currentIndex: number;
   mode: 'sequential' | 'random';
   userAnswers: AnswerRecord[];
@@ -26,14 +27,17 @@ export interface QuizState {
   showResult: boolean;
   startTime: number;
   endTime: number;
+  isRetryWrong: boolean;
   
   setMode: (mode: 'sequential' | 'random') => void;
   startQuiz: () => void;
+  retryWrongQuestions: () => void;
   setSelectedAnswer: (answer: string) => void;
   submitAnswer: () => void;
   goToQuestion: (index: number) => void;
   nextQuestion: () => void;
   prevQuestion: () => void;
+  skipQuestion: () => void;
   finishQuiz: () => void;
   resetQuiz: () => void;
   getCurrentQuestion: () => Question | null;
@@ -55,6 +59,7 @@ export const useQuizStore = create<QuizState>()(
   persist(
     (set, get) => ({
       questions: questionsData as Question[],
+      originalQuestions: questionsData as Question[],
       currentIndex: 0,
       mode: 'sequential',
       userAnswers: [],
@@ -62,16 +67,17 @@ export const useQuizStore = create<QuizState>()(
       showResult: false,
       startTime: 0,
       endTime: 0,
+      isRetryWrong: false,
 
       setMode: (mode) => {
         set({ mode });
       },
 
       startQuiz: () => {
-        const { mode, questions } = get();
-        let shuffledQuestions = [...questions];
+        const { mode, originalQuestions } = get();
+        let shuffledQuestions = [...originalQuestions];
         if (mode === 'random') {
-          shuffledQuestions = shuffleArray(questions);
+          shuffledQuestions = shuffleArray(originalQuestions);
         }
         set({
           questions: shuffledQuestions,
@@ -80,6 +86,23 @@ export const useQuizStore = create<QuizState>()(
           selectedAnswer: '',
           showResult: false,
           startTime: Date.now(),
+          isRetryWrong: false,
+        });
+      },
+
+      retryWrongQuestions: () => {
+        const { originalQuestions, userAnswers } = get();
+        const wrongIds = userAnswers.filter(a => !a.isCorrect).map(a => a.questionId);
+        const wrongQuestions = originalQuestions.filter(q => wrongIds.includes(q.id));
+        
+        set({
+          questions: wrongQuestions,
+          currentIndex: 0,
+          userAnswers: [],
+          selectedAnswer: '',
+          showResult: false,
+          startTime: Date.now(),
+          isRetryWrong: true,
         });
       },
 
@@ -141,6 +164,19 @@ export const useQuizStore = create<QuizState>()(
           const existingAnswer = userAnswers.find((a) => a.questionId === prevQuestion.id);
           set({
             currentIndex: currentIndex - 1,
+            selectedAnswer: existingAnswer?.userAnswer || '',
+            showResult: !!existingAnswer,
+          });
+        }
+      },
+
+      skipQuestion: () => {
+        const { questions, currentIndex, userAnswers } = get();
+        if (currentIndex < questions.length - 1) {
+          const nextQuestion = questions[currentIndex + 1];
+          const existingAnswer = userAnswers.find((a) => a.questionId === nextQuestion.id);
+          set({
+            currentIndex: currentIndex + 1,
             selectedAnswer: existingAnswer?.userAnswer || '',
             showResult: !!existingAnswer,
           });

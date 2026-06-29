@@ -1,5 +1,5 @@
 import { useQuizStore } from '@/store/quizStore';
-import { ArrowLeft, ArrowRight, CheckCircle, XCircle, Lightbulb, Home, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, CheckCircle, XCircle, Lightbulb, Home, ChevronLeft, ChevronRight, SkipForward } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ export default function Quiz() {
     submitAnswer,
     nextQuestion,
     prevQuestion,
+    skipQuestion,
     goToQuestion,
     finishQuiz,
   } = useQuizStore();
@@ -268,46 +269,49 @@ export default function Quiz() {
               <span>上一题</span>
             </button>
             
-            {!showResult ? (
-              <button
-                onClick={handleSubmit}
-                disabled={!selectedAnswer.trim()}
-                className={`px-8 py-3 rounded-xl font-medium transition-all ${
-                  selectedAnswer.trim()
-                    ? 'gradient-primary text-white hover:opacity-90 hover:scale-105'
-                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                }`}
-              >
-                提交答案
-              </button>
-            ) : isLastQuestion ? (
-              <button
-                onClick={handleFinish}
-                className="px-8 py-3 rounded-xl font-medium gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all"
-              >
-                查看结果
-              </button>
-            ) : (
-              <button
-                onClick={nextQuestion}
-                className="px-8 py-3 rounded-xl font-medium gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all"
-              >
-                下一题
-              </button>
-            )}
-            
-            <button
-              onClick={nextQuestion}
-              disabled={isLastQuestion || !showResult}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
-                isLastQuestion || !showResult
-                  ? 'text-gray-300 cursor-not-allowed'
-                  : 'text-gray-600 hover:text-primary-600 hover:bg-gray-100'
-              }`}
-            >
-              <span>下一题</span>
-              <ChevronRight className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-3">
+              {!showResult ? (
+                <>
+                  <button
+                    onClick={handleSubmit}
+                    disabled={!selectedAnswer.trim()}
+                    className={`px-8 py-3 rounded-xl font-medium transition-all ${
+                      selectedAnswer.trim()
+                        ? 'gradient-primary text-white hover:opacity-90 hover:scale-105'
+                        : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    }`}
+                  >
+                    提交答案
+                  </button>
+                  <button
+                    onClick={skipQuestion}
+                    disabled={isLastQuestion}
+                    className={`flex items-center gap-2 px-4 py-3 rounded-xl font-medium transition-all ${
+                      isLastQuestion
+                        ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    <SkipForward className="w-5 h-5" />
+                    跳过
+                  </button>
+                </>
+              ) : isLastQuestion ? (
+                <button
+                  onClick={handleFinish}
+                  className="px-8 py-3 rounded-xl font-medium gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all"
+                >
+                  查看结果
+                </button>
+              ) : (
+                <button
+                  onClick={nextQuestion}
+                  className="px-8 py-3 rounded-xl font-medium gradient-primary text-white hover:opacity-90 hover:scale-105 transition-all"
+                >
+                  下一题
+                </button>
+              )}
+            </div>
           </div>
         </div>
         

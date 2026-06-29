@@ -150,7 +150,7 @@
     "options": [],
     "answer": "最大；平均；5；3",
     "analysis": "最大池化取窗口内最大值：max(2,5,1,4)=5；平均池化取窗口内平均值：(2+5+1+4)/4=12/4=3。",
-    "type": "choice"
+    "type": "fill"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "options": [],
     "answer": "不变；1；1",
     "analysis": "GAP只压缩空间维度，不改变通道数。8×8的空间被压缩为1×1，通道数仍为128。",
-    "type": "choice"
+    "type": "fill"
   },
   {
     "id": 20,
@@ -721,12 +721,7 @@
   {
     "id": 69,
     "content": "在Transformer中，缩放点积注意力公式为Attention(Q,K,V)=softmax(QK^T/√d_k)·V。假设Q和K都是4×4的矩阵，d_k=4，则QK^T的结果是____×____的矩阵。",
-    "options": [
-      "A. 4×4",
-      "B. 4×1",
-      "C. 1×4",
-      "D. 16×16"
-    ],
+    "options": [],
     "answer": "A",
     "analysis": "矩阵乘法规则：若Q是m×n矩阵，K是n×p矩阵，则QK^T是m×p矩阵。这里Q和K都是4×4，所以QK^T是4×4矩阵。除以√d_k=√4=2用于防止Softmax梯度饱和。",
     "type": "fill"
@@ -2307,19 +2302,6 @@
   },
   {
     "id": 213,
-    "content": "LSTM引入的关键设计是____。",
-    "options": [
-      "A. 更深的网络",
-      "B. 记忆状态cell state+门控机制",
-      "C. 注意力机制",
-      "D. 残差连接"
-    ],
-    "answer": "B",
-    "analysis": "LSTM通过cell state和三个门控(遗忘门、输入门、输出门)解决梯度消失问题",
-    "type": "choice"
-  },
-  {
-    "id": 214,
     "content": "Transformer的两大核心优势是____。",
     "options": [
       "A. 更少参数和更快训练",
@@ -2332,7 +2314,7 @@
     "type": "choice"
   },
   {
-    "id": 215,
+    "id": 214,
     "content": "缩放点积注意力中除以√d_k是为了____。",
     "options": [
       "A. 加速运算",
@@ -2345,7 +2327,7 @@
     "type": "choice"
   },
   {
-    "id": 216,
+    "id": 215,
     "content": "因果掩码Causal Mask的作用是____。",
     "options": [
       "A. 加速训练",
@@ -2358,7 +2340,7 @@
     "type": "choice"
   },
   {
-    "id": 217,
+    "id": 216,
     "content": "Transformer输入表示由____组成。",
     "options": [
       "A. 仅Embedding",
@@ -2371,7 +2353,7 @@
     "type": "choice"
   },
   {
-    "id": 218,
+    "id": 217,
     "content": "LayerNorm对每个token的____维度进行标准化。",
     "options": [
       "A. 序列",
@@ -2384,7 +2366,7 @@
     "type": "choice"
   },
   {
-    "id": 219,
+    "id": 218,
     "content": "残差连接公式为____。",
     "options": [
       "A. y=F(x)",
@@ -2397,7 +2379,7 @@
     "type": "choice"
   },
   {
-    "id": 220,
+    "id": 219,
     "content": "频率原则指神经网络按____顺序学习。",
     "options": [
       "A. 高频到低频",
@@ -2410,7 +2392,7 @@
     "type": "choice"
   },
   {
-    "id": 221,
+    "id": 220,
     "content": "早停Early Stopping的原理是____。",
     "options": [
       "A. 在训练开始时停止",
@@ -2423,7 +2405,7 @@
     "type": "choice"
   },
   {
-    "id": 222,
+    "id": 221,
     "content": "图像分类中的频率指的是____的频率。",
     "options": [
       "A. 图像像素值",
@@ -2436,7 +2418,7 @@
     "type": "choice"
   },
   {
-    "id": 223,
+    "id": 222,
     "content": "对抗噪声通常沿分类函数的____方向添加。",
     "options": [
       "A. 低频成分",
@@ -2449,20 +2431,7 @@
     "type": "choice"
   },
   {
-    "id": 224,
-    "content": "凝聚现象Condensation指____初始化下神经元趋同。",
-    "options": [
-      "A. 大",
-      "B. 小",
-      "C. 中等",
-      "D. 零"
-    ],
-    "answer": "B",
-    "analysis": "小初始化下，同层神经元方向趋同，有效神经元数量减少",
-    "type": "choice"
-  },
-  {
-    "id": 225,
+    "id": 223,
     "content": "平坦解相比尖锐解____。",
     "options": [
       "A. 训练损失更低",
@@ -2475,20 +2444,7 @@
     "type": "choice"
   },
   {
-    "id": 226,
-    "content": "小批量SGD更易找到平坦解是因为____。",
-    "options": [
-      "A. 计算快",
-      "B. 随机性强，有助于逃离尖锐区域",
-      "C. 参数少",
-      "D. 梯度大"
-    ],
-    "answer": "B",
-    "analysis": "小批量SGD引入的随机性更强，有助于跳出尖锐解区域",
-    "type": "choice"
-  },
-  {
-    "id": 227,
+    "id": 224,
     "content": "大模型又称____。",
     "options": [
       "A. 通用模型",
@@ -2501,33 +2457,7 @@
     "type": "choice"
   },
   {
-    "id": 228,
-    "content": "Encoder-only架构不使用causal mask，更适合____任务。",
-    "options": [
-      "A. 生成",
-      "B. 理解",
-      "C. 翻译",
-      "D. 摘要"
-    ],
-    "answer": "B",
-    "analysis": "Encoder-only能看到全部上下文，适合理解类任务(分类/分析)",
-    "type": "choice"
-  },
-  {
-    "id": 229,
-    "content": "Decoder-only架构使用causal mask，更适合____任务。",
-    "options": [
-      "A. 分类",
-      "B. 理解",
-      "C. 生成",
-      "D. 回归"
-    ],
-    "answer": "C",
-    "analysis": "Decoder-only通过因果掩码实现自回归生成，适合文本生成任务",
-    "type": "choice"
-  },
-  {
-    "id": 230,
+    "id": 225,
     "content": "监督微调SFT使用____数据进行训练。",
     "options": [
       "A. 大量无标注",
@@ -2540,7 +2470,7 @@
     "type": "choice"
   },
   {
-    "id": 231,
+    "id": 226,
     "content": "知识蒸馏的目的是让____学习____的能力。",
     "options": [
       "A. 大模型学小模型",
@@ -2553,20 +2483,7 @@
     "type": "choice"
   },
   {
-    "id": 232,
-    "content": "上下文学习In-context Learning____修改模型权重。",
-    "options": [
-      "A. 需要",
-      "B. 不需要",
-      "C. 部分需要",
-      "D. 完全重置"
-    ],
-    "answer": "B",
-    "analysis": "ICL仅通过提示和少量示例应用新任务，不修改模型权重",
-    "type": "choice"
-  },
-  {
-    "id": 233,
+    "id": 227,
     "content": "思维链CoT引导模型____。",
     "options": [
       "A. 直接输出答案",
@@ -2579,7 +2496,7 @@
     "type": "choice"
   },
   {
-    "id": 234,
+    "id": 228,
     "content": "缩放定律Scaling Law指模型规模增大时测试损失按____下降。",
     "options": [
       "A. 线性",
@@ -2592,20 +2509,7 @@
     "type": "choice"
   },
   {
-    "id": 235,
-    "content": "涌现能力指模型参数达到____时才出现的能力。",
-    "options": [
-      "A. 一定规模后",
-      "B. 任意规模",
-      "C. 小规模",
-      "D. 零规模"
-    ],
-    "answer": "A",
-    "analysis": "涌现能力在模型规模达到一定阈值后才出现",
-    "type": "choice"
-  },
-  {
-    "id": 236,
+    "id": 229,
     "content": "幻觉Hallucination指生成____的内容。",
     "options": [
       "A. 完全正确",
@@ -2618,7 +2522,7 @@
     "type": "choice"
   },
   {
-    "id": 237,
+    "id": 230,
     "content": "强化学习的目标是最大化____。",
     "options": [
       "A. 准确率",
@@ -2631,20 +2535,7 @@
     "type": "choice"
   },
   {
-    "id": 238,
-    "content": "强化学习与监督学习的核心区别是____。",
-    "options": [
-      "A. 更多数据",
-      "B. 通过奖励反馈而非标注标签学习",
-      "C. 更少参数",
-      "D. 收敛更快"
-    ],
-    "answer": "B",
-    "analysis": "强化学习通过奖励信号学习，监督学习通过标注标签学习",
-    "type": "choice"
-  },
-  {
-    "id": 239,
+    "id": 231,
     "content": "马尔可夫性指未来状态的概率分布____。",
     "options": [
       "A. 依赖完整历史",
@@ -2657,46 +2548,7 @@
     "type": "choice"
   },
   {
-    "id": 240,
-    "content": "状态价值函数V(s)表示从状态s出发的____回报。",
-    "options": [
-      "A. 即时",
-      "B. 期望累计",
-      "C. 最大",
-      "D. 最小"
-    ],
-    "answer": "B",
-    "analysis": "状态价值函数V(s)是在策略π下从状态s出发的期望累计回报",
-    "type": "choice"
-  },
-  {
-    "id": 241,
-    "content": "Bellman方程联系不同状态的____。",
-    "options": [
-      "A. 奖励",
-      "B. 价值",
-      "C. 动作",
-      "D. 参数"
-    ],
-    "answer": "B",
-    "analysis": "Bellman方程建立了不同状态价值之间的递归关系",
-    "type": "choice"
-  },
-  {
-    "id": 242,
-    "content": "动态规划DP求解RL需要知道____。",
-    "options": [
-      "A. 大量数据",
-      "B. 转移概率P",
-      "C. 神经网络",
-      "D. 随机策略"
-    ],
-    "answer": "B",
-    "analysis": "DP方法需要知道完整的环境模型(转移概率P)",
-    "type": "choice"
-  },
-  {
-    "id": 243,
+    "id": 232,
     "content": "深度强化学习用____近似价值函数和策略。",
     "options": [
       "A. 线性模型",
@@ -2709,33 +2561,7 @@
     "type": "choice"
   },
   {
-    "id": 244,
-    "content": "DQN用于____动作空间。",
-    "options": [
-      "A. 连续",
-      "B. 离散",
-      "C. 任意",
-      "D. 无动作"
-    ],
-    "answer": "B",
-    "analysis": "DQN适合处理离散动作空间",
-    "type": "choice"
-  },
-  {
-    "id": 245,
-    "content": "RLHF中的奖励函数由____构造。",
-    "options": [
-      "A. 机器自动",
-      "B. 人类偏好",
-      "C. 随机生成",
-      "D. 预训练模型"
-    ],
-    "answer": "B",
-    "analysis": "RLHF奖励函数由人类偏好数据构造",
-    "type": "choice"
-  },
-  {
-    "id": 246,
+    "id": 233,
     "content": "图像数据的幂律衰减可理解为无穷多个不同半衰期的____之和。",
     "options": [],
     "answer": "指数衰减",
@@ -2743,35 +2569,11 @@
     "type": "fill"
   },
   {
-    "id": 247,
+    "id": 234,
     "content": "网络拟合顺序是先学____再学____。",
     "options": [],
     "answer": "轮廓；细节",
     "analysis": "频率原则导致先学习低频轮廓，后学习高频细节",
-    "type": "fill"
-  },
-  {
-    "id": 248,
-    "content": "平坦解附近损失变化____，对扰动更鲁棒。",
-    "options": [],
-    "answer": "慢",
-    "analysis": "平坦解的特点是损失曲面平缓，参数扰动影响小",
-    "type": "fill"
-  },
-  {
-    "id": 249,
-    "content": "最优策略π*通过策略评估与策略改进____求解。",
-    "options": [],
-    "answer": "迭代",
-    "analysis": "通过迭代进行策略评估和策略改进，收敛到最优策略",
-    "type": "fill"
-  },
-  {
-    "id": 250,
-    "content": "Bellman方程矩阵形式：V=____。",
-    "options": [],
-    "answer": "R+γPV",
-    "analysis": "Bellman方程矩阵形式：V = R + γPV",
     "type": "fill"
   }
 ]

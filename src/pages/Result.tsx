@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Result() {
-  const { getStats, getWrongQuestions, questions, resetQuiz, startQuiz } = useQuizStore();
+  const { getStats, getWrongQuestions, questions, resetQuiz, retryWrongQuestions } = useQuizStore();
   const navigate = useNavigate();
   const [expandedWrong, setExpandedWrong] = useState<number[]>([]);
   
@@ -39,7 +39,7 @@ export default function Result() {
   
   const handleRetryWrong = () => {
     if (wrongQuestions.length === 0) return;
-    startQuiz();
+    retryWrongQuestions();
     navigate('/quiz');
   };
   

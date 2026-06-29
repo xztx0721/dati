@@ -35,7 +35,7 @@ export default function Home() {
             AI基础A复习题库
           </h1>
           <p className="text-gray-600 text-lg">
-            共205道精选题目，助力高效备考
+            共{questions.length}道精选题目，助力高效备考
           </p>
         </header>
         
