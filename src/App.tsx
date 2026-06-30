@@ -5,7 +5,7 @@ import Result from "@/pages/Result";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/dati">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/quiz" element={<Quiz />} />
